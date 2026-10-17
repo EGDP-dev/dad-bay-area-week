@@ -1,0 +1,1150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+</head>
+<body>
+<title>Dad's Bay Area Week</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Marcellus&display=swap">
+<style>
+/* Layout: fog-gray masthead with an International Orange bridge line, sticky tab bar, then one working view at a time; cards stack to 1 column on phones, 2–3 wider */
+:root {
+  --bg: #ECEFEE;
+  --surface: #FFFFFF;
+  --surface-2: #F4F6F5;
+  --ink: #16212A;
+  --muted: #52616A;
+  --line: #D2D9D8;
+  --bridge: #B5381F;
+  --bridge-ink: #FFFFFF;
+  --bridge-soft: #F8E3DD;
+  --bay: #1D5878;
+  --bay-soft: #DCE7ED;
+  --water: #8FC1DD;
+  --land: #EFE5C8;
+  --land-line: #B49F6A;
+  --good: #2C7A4C; --good-bg: #E0F1E6;
+  --warn: #8F5A00; --warn-bg: #FFF1D2;
+  --bad: #AE2A1F; --bad-bg: #FBE3DF;
+  --c-food: #B5381F; --c-shopping: #8C6410; --c-outdoors: #2C7A4C; --c-culture: #1D5878; --c-family: #0D7672; --c-daytrip: #6A4C9E;
+  --d1: #B5381F; --d2: #1E62A8; --d3: #2C7A4C; --d4: #A06E00; --d5: #7A4FB0; --d6: #0D7672; --d7: #B0457E; --d8: #5C6A1D;
+  --pin-ink: #FFFFFF;
+  --shadow: 0 1px 2px rgba(22,33,42,.06), 0 4px 14px rgba(22,33,42,.06);
+  --font-display: "Marcellus", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --r: 14px;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E151A; --surface: #162028; --surface-2: #1C2831; --ink: #E6ECED; --muted: #A1AFB6; --line: #2B3943;
+    --bridge: #EC6A4E; --bridge-ink: #1A0D09; --bridge-soft: #3A1D16; --bay: #82B6D4; --bay-soft: #1B3341;
+    --water: #0E3A58; --land: #3A3A2A; --land-line: #6E6A4A;
+    --good: #6EC28F; --good-bg: #16331F; --warn: #E2AA43; --warn-bg: #362A10; --bad: #F2806F; --bad-bg: #3C1D19;
+    --c-food: #EF7B62; --c-shopping: #D9A64A; --c-outdoors: #6EC28F; --c-culture: #82B6D4; --c-family: #4FC3BC; --c-daytrip: #B59CE2;
+    --d1: #EF7B62; --d2: #6FA8E6; --d3: #6EC28F; --d4: #E2B043; --d5: #B596E8; --d6: #4FC3BC; --d7: #E68AB6; --d8: #B8C45C;
+    --pin-ink: #0E151A;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 4px 14px rgba(0,0,0,.25);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E151A; --surface: #162028; --surface-2: #1C2831; --ink: #E6ECED; --muted: #A1AFB6; --line: #2B3943;
+  --bridge: #EC6A4E; --bridge-ink: #1A0D09; --bridge-soft: #3A1D16; --bay: #82B6D4; --bay-soft: #1B3341;
+  --water: #0E3A58; --land: #3A3A2A; --land-line: #6E6A4A;
+  --good: #6EC28F; --good-bg: #16331F; --warn: #E2AA43; --warn-bg: #362A10; --bad: #F2806F; --bad-bg: #3C1D19;
+  --c-food: #EF7B62; --c-shopping: #D9A64A; --c-outdoors: #6EC28F; --c-culture: #82B6D4; --c-family: #4FC3BC; --c-daytrip: #B59CE2;
+  --d1: #EF7B62; --d2: #6FA8E6; --d3: #6EC28F; --d4: #E2B043; --d5: #B596E8; --d6: #4FC3BC; --d7: #E68AB6; --d8: #B8C45C;
+  --pin-ink: #0E151A;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 4px 14px rgba(0,0,0,.25);
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 18px; line-height: 1.55;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--surface); }
+img, svg { max-width: 100%; }
+a { color: var(--bay); text-underline-offset: 3px; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.15; text-wrap: balance; margin: 0; }
+button, select, input, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--bay); outline-offset: 2px; border-radius: 6px; }
+.wrap { max-width: 1160px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+/* Masthead */
+.mast { background: var(--surface); border-bottom: 1px solid var(--line); }
+.mast .wrap { display: grid; grid-template-columns: minmax(0,1fr); gap: 4px; padding-block: 22px 14px; position: relative; }
+.mast .eyebrow { font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--bridge); font-weight: 700; }
+.mast h1 { font-size: clamp(2rem, 6.4vw, 3.2rem); }
+.mast .sub { color: var(--muted); margin: 0; }
+.bridge-art { display: block; width: 100%; height: 64px; margin-top: 10px; }
+.bridge-art .cable, .bridge-art .deck, .bridge-art .hanger, .bridge-art .tower { stroke: var(--bridge); fill: none; }
+.bridge-art .tower { stroke-width: 5; }
+.bridge-art .cable { stroke-width: 2.4; }
+.bridge-art .deck { stroke-width: 3; }
+.bridge-art .hanger { stroke-width: 1; opacity: .7; }
+.bridge-art .water { stroke: var(--bay); stroke-width: 1.2; opacity: .45; fill: none; }
+.theme-btn { justify-self: start; margin-top: 6px; min-height: 44px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface-2); cursor: pointer; font-size: .9rem; }
+
+/* Tabs */
+.tabs { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--surface); border-bottom: 1px solid var(--line); }
+.tabs .wrap { display: flex; gap: 6px; overflow-x: auto; padding-block: 8px; scrollbar-width: none; }
+.tabs .wrap::-webkit-scrollbar { display: none; }
+.tab { flex: 0 0 auto; min-height: 48px; padding: 0 18px; border-radius: 999px; border: 1px solid transparent; background: transparent; cursor: pointer; font-weight: 700; color: var(--muted); }
+.tab[aria-selected="true"] { background: var(--bridge); color: var(--bridge-ink); }
+.tab .count { font-weight: 400; opacity: .85; margin-left: 4px; font-variant-numeric: tabular-nums; }
+
+main { padding-block: 22px 60px; }
+.view { display: grid; gap: 22px; }
+.section-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
+.section-head h2 { font-size: clamp(1.6rem, 4.4vw, 2.2rem); }
+.lede { color: var(--muted); margin: 0; max-width: 62ch; }
+
+/* How to use */
+.howto { background: var(--bay-soft); border-radius: var(--r); padding: 18px 20px; display: grid; gap: 10px; }
+.howto h2 { font-size: 1.4rem; }
+.howto ol { margin: 0; padding-left: 1.3em; display: grid; gap: 6px; max-width: 70ch; }
+.howto .small { font-size: .92rem; color: var(--muted); margin: 0; }
+
+/* Pairings */
+.pairs { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 14px; }
+.pair { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 16px 18px; display: grid; gap: 10px; align-content: start; }
+.pair h3 { font-size: 1.3rem; }
+.pair p { margin: 0; font-size: .96rem; color: var(--muted); }
+.pair .ids { display: flex; flex-wrap: wrap; gap: 6px; }
+.pair .ids span { font-size: .85rem; padding: 3px 10px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--line); }
+.label-kicker { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--bridge); font-weight: 700; }
+
+/* Filters */
+.filters { display: grid; gap: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; }
+.search { width: 100%; min-height: 52px; padding: 0 16px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface-2); font-size: 1.05rem; }
+.chiprow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.chiprow .lbl { font-size: .82rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin-right: 4px; min-width: 64px; }
+.chip { min-height: 44px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface-2); cursor: pointer; font-size: .95rem; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.result-line { font-size: .95rem; color: var(--muted); margin: 0; }
+
+/* Cards */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 16px; align-items: start; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; display: grid; box-shadow: var(--shadow); min-width: 0; }
+.card.skipped { opacity: .55; }
+.art { position: relative; height: 92px; display: flex; align-items: center; gap: 14px; padding: 0 18px; color: var(--cc); background: color-mix(in srgb, var(--cc) 13%, var(--surface)); border-bottom: 1px solid var(--line); overflow: hidden; }
+.art svg.icon { width: 44px; height: 44px; flex: 0 0 auto; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.art .art-txt { display: grid; line-height: 1.2; }
+.art .cat { font-weight: 700; font-size: .9rem; letter-spacing: .06em; text-transform: uppercase; }
+.art .area { font-size: .9rem; color: var(--muted); }
+.art .waves { position: absolute; right: -10px; bottom: -6px; width: 160px; height: 60px; opacity: .35; stroke: currentColor; fill: none; stroke-width: 1.2; }
+.must-flag { position: absolute; top: 10px; right: 10px; background: var(--bridge); color: var(--bridge-ink); font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; }
+.cbody { padding: 16px 18px 6px; display: grid; gap: 10px; min-width: 0; }
+.cbody h3 { font-size: 1.45rem; }
+.hood { margin: 0; color: var(--muted); font-size: .95rem; }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; margin: 0; }
+.facts div { background: var(--surface-2); border-radius: 10px; padding: 8px 10px; min-width: 0; }
+.facts dt { font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+.facts dd { margin: 0; font-size: .92rem; font-weight: 700; overflow-wrap: anywhere; }
+.flags { display: flex; flex-wrap: wrap; gap: 6px; }
+.flag { font-size: .84rem; padding: 3px 10px; border-radius: 999px; font-weight: 700; }
+.flag.resv { background: var(--bad-bg); color: var(--bad); }
+.flag.days { background: var(--warn-bg); color: var(--warn); }
+.flag.closed { background: var(--bad-bg); color: var(--bad); }
+.flag.inday { background: var(--good-bg); color: var(--good); }
+.desc { margin: 0; }
+details.more { border-top: 1px solid var(--line); padding-top: 8px; }
+details.more summary { cursor: pointer; font-weight: 700; color: var(--bay); min-height: 40px; display: flex; align-items: center; }
+details.more ul { margin: 4px 0 8px; padding-left: 1.2em; display: grid; gap: 4px; font-size: .95rem; }
+.addr { font-size: .93rem; margin: 0 0 4px; }
+.vnote { font-size: .82rem; color: var(--muted); margin: 0 0 8px; }
+.cactions { display: grid; gap: 10px; padding: 10px 18px 18px; }
+.rate-row { display: flex; gap: 8px; align-items: stretch; }
+.heart { width: 52px; min-height: 48px; flex: 0 0 auto; border-radius: 12px; border: 1px solid var(--line); background: var(--surface-2); cursor: pointer; display: grid; place-items: center; color: var(--muted); }
+.heart svg { width: 26px; height: 26px; stroke: currentColor; fill: none; stroke-width: 2; }
+.heart[aria-pressed="true"] { color: var(--bridge); border-color: var(--bridge); background: var(--bridge-soft); }
+.heart[aria-pressed="true"] svg { fill: currentColor; }
+.seg { flex: 1 1 auto; display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.seg button { min-height: 48px; border: 0; background: var(--surface-2); cursor: pointer; font-size: .92rem; font-weight: 700; color: var(--muted); padding: 0 4px; }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button[aria-pressed="true"][data-r="must"] { background: var(--good); color: var(--surface); }
+.seg button[aria-pressed="true"][data-r="maybe"] { background: var(--warn); color: var(--surface); }
+.seg button[aria-pressed="true"][data-r="skip"] { background: var(--muted); color: var(--surface); }
+.addsel { width: 100%; min-height: 50px; border-radius: 12px; border: 1px solid var(--bay); background: var(--bay-soft); color: var(--ink); padding: 0 12px; font-weight: 700; cursor: pointer; }
+
+/* Family */
+.family-band { background: color-mix(in srgb, var(--c-family) 10%, var(--surface)); border: 1px solid var(--line); border-radius: var(--r); padding: 18px 20px; display: grid; gap: 8px; }
+.family-band p { margin: 0; max-width: 66ch; }
+
+/* Planner */
+.tripbar { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; align-items: end; }
+.field { display: grid; gap: 4px; }
+.field label { font-size: .85rem; font-weight: 700; color: var(--muted); }
+.field input { min-height: 50px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface-2); padding: 0 14px; width: 100%; }
+.btn { min-height: 50px; padding: 0 18px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface-2); cursor: pointer; font-weight: 700; }
+.btn.primary { background: var(--bridge); color: var(--bridge-ink); border-color: var(--bridge); }
+.btn.danger { color: var(--bad); }
+.btn.armed { background: var(--bad); color: var(--surface); border-color: var(--bad); }
+.btnrow { display: flex; flex-wrap: wrap; gap: 10px; }
+.banner { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; justify-content: space-between; background: var(--warn-bg); color: var(--ink); border-radius: var(--r); padding: 12px 16px; }
+.banner p { margin: 0; }
+.hotel-strip { background: var(--surface); border: 1px solid var(--line); border-left: 6px solid var(--bridge); border-radius: var(--r); padding: 12px 16px; display: grid; gap: 4px; }
+.hotel-strip p { margin: 0; }
+.tray { background: var(--surface); border: 1px dashed var(--line); border-radius: var(--r); padding: 14px 16px; display: grid; gap: 10px; }
+.tray h3 { font-size: 1.25rem; }
+.tray ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 8px; }
+.tray li { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 8px; align-items: center; background: var(--surface-2); border-radius: 10px; padding: 6px 6px 6px 12px; cursor: grab; }
+.tray li .nm { font-weight: 700; font-size: .98rem; }
+.tray select { min-height: 44px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); padding: 0 8px; max-width: 130px; }
+.days { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 16px; align-items: start; }
+.day { background: var(--surface); border: 1px solid var(--line); border-top: 6px solid var(--dc); border-radius: var(--r); display: grid; gap: 10px; padding: 14px 16px 16px; min-width: 0; }
+.day.over { outline: 3px dashed var(--dc); outline-offset: 2px; }
+.dayhead { display: grid; gap: 6px; }
+.dayhead .row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.dayhead h3 { font-size: 1.5rem; color: var(--dc); }
+.dayhead .date { color: var(--muted); font-size: .95rem; }
+.load { display: flex; align-items: center; gap: 10px; font-size: .9rem; font-variant-numeric: tabular-nums; }
+.meter { flex: 1 1 auto; height: 10px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--line); overflow: hidden; }
+.meter i { display: block; height: 100%; background: var(--dc); }
+.status { font-weight: 700; padding: 2px 10px; border-radius: 999px; font-size: .84rem; white-space: nowrap; }
+.status.easy { background: var(--good-bg); color: var(--good); }
+.status.full { background: var(--warn-bg); color: var(--warn); }
+.status.packed { background: var(--bad-bg); color: var(--bad); }
+.status.empty { background: var(--surface-2); color: var(--muted); }
+.warns { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; }
+.warns li { font-size: .88rem; background: var(--bad-bg); color: var(--bad); border-radius: 8px; padding: 6px 10px; }
+.warns li.soft { background: var(--warn-bg); color: var(--warn); }
+.daylist { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; min-height: 56px; border-radius: 10px; }
+.daylist:empty::before { content: attr(data-msg); display: block; padding: 14px; font-size: .92rem; color: var(--muted); border: 1px dashed var(--line); border-radius: 10px; }
+.item { display: grid; grid-template-columns: 10px minmax(0,1fr) auto; gap: 10px; align-items: center; background: var(--surface-2); border-radius: 10px; padding: 8px 6px 8px 10px; cursor: grab; }
+.item .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--dc); }
+.item .nm { font-weight: 700; line-height: 1.25; }
+.item .sm { display: block; font-size: .84rem; color: var(--muted); font-weight: 400; }
+.item .ctl { display: flex; gap: 2px; }
+.ib { width: 40px; height: 44px; border-radius: 8px; border: 0; background: transparent; cursor: pointer; color: var(--muted); display: grid; place-items: center; }
+.ib:hover { background: var(--surface); color: var(--ink); }
+.ib svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.notes textarea { width: 100%; min-height: 76px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface-2); padding: 10px 12px; resize: vertical; font-size: .98rem; }
+.notes label { font-size: .85rem; font-weight: 700; color: var(--muted); }
+
+/* Map */
+.mapwrap { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 12px; display: grid; gap: 12px; }
+.mapctl { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 12px; font-size: .88rem; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 14px; height: 14px; border-radius: 50%; background: var(--c); display: inline-block; border: 2px solid var(--surface); box-shadow: 0 0 0 1px var(--line); }
+.mapsvg { width: 100%; height: auto; display: block; border-radius: 10px; background: var(--land); touch-action: manipulation; }
+.mapsvg .water { fill: var(--water); }
+.mapsvg .isle { fill: var(--land); stroke: var(--land-line); }
+.mapsvg .shore { fill: none; stroke: var(--land-line); }
+.mapsvg .gg { stroke: var(--bridge); stroke-linecap: round; }
+.mapsvg .br { stroke: var(--muted); stroke-linecap: round; opacity: .6; }
+.mapsvg .mlabel { fill: var(--muted); font-family: var(--font-display); }
+.mapsvg .wlabel { fill: var(--bay); font-family: var(--font-display); font-style: italic; opacity: .8; }
+.mapsvg .pin { cursor: pointer; }
+.mapsvg .pin circle { stroke: var(--surface); }
+.mapsvg .pin text { fill: var(--pin-ink); font-family: var(--font-body); font-weight: 700; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+.mapsvg .pin.idea circle { fill: var(--surface); stroke: var(--muted); }
+.mapsvg .pin.sel circle { stroke: var(--ink); }
+.mapsvg .home path { fill: var(--ink); stroke: var(--surface); }
+.mapsvg .home text { fill: var(--ink); font-family: var(--font-body); font-weight: 700; }
+.mapinfo { background: var(--surface-2); border-radius: 10px; padding: 12px 14px; min-height: 60px; }
+.mapinfo p { margin: 0; }
+.offmap { margin: 0; padding-left: 1.2em; font-size: .95rem; }
+
+/* Summary */
+.sum { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 20px; display: grid; gap: 20px; }
+.sum h3 { font-size: 1.45rem; }
+.resvlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.resvlist li { border-left: 4px solid var(--bad); background: var(--surface-2); padding: 10px 14px; border-radius: 0 10px 10px 0; }
+.resvlist .when { display: block; font-weight: 700; font-size: .9rem; color: var(--bad); }
+.sday { display: grid; gap: 8px; padding-top: 14px; border-top: 1px solid var(--line); }
+.sday h4 { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: 1.3rem; color: var(--dc); }
+.sday ol { margin: 0; padding-left: 1.3em; display: grid; gap: 6px; }
+.sday .a { color: var(--muted); font-size: .92rem; display: block; }
+.sday .n { margin: 0; font-style: italic; color: var(--muted); }
+.framed-note { font-size: .9rem; color: var(--muted); margin: 0; }
+
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(18px + env(safe-area-inset-bottom, 0px)); background: var(--ink); color: var(--bg); padding: 12px 20px; border-radius: 999px; font-weight: 700; z-index: 50; max-width: calc(100% - 32px); text-align: center; box-shadow: var(--shadow); }
+footer { color: var(--muted); font-size: .9rem; padding-block: 0 40px; }
+footer p { max-width: 75ch; }
+
+@media (min-width: 720px) {
+  body { font-size: 19px; }
+  .mast .wrap { grid-template-columns: minmax(0,1fr) 320px; align-items: end; }
+  .bridge-art { grid-row: 1 / span 3; grid-column: 2; height: 90px; margin: 0; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .card, .item { transition: opacity .2s ease, transform .15s ease; }
+  .item:active { transform: scale(.99); }
+}
+@media print {
+  body { background: #fff; color: #000; font-size: 12pt; }
+  body::before, .mast, .tabs, .view:not(#v-summary), .sum-actions, .framed-note, .toast, footer { display: none !important; }
+  #v-summary { display: block !important; }
+  .sum { border: 0; padding: 0; }
+  .sday { break-inside: avoid; }
+  a { color: #000; }
+}
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <span class="eyebrow">Staying on Van Ness Ave · Family in Burlingame</span>
+    <h1 id="title">Dad's Bay Area Week</h1>
+    <p class="sub" id="subline">Eight days of San Francisco, Marin and the Peninsula, planned together.</p>
+    <svg class="bridge-art" id="bridgeArt" viewBox="0 0 320 90" preserveAspectRatio="xMidYMid meet" aria-hidden="true"></svg>
+    <button class="theme-btn" id="themeBtn" type="button">Theme: Auto</button>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <div class="wrap" role="tablist">
+    <button class="tab" role="tab" data-tab="explore" id="t-explore">Explore</button>
+    <button class="tab" role="tab" data-tab="family" id="t-family">Family time</button>
+    <button class="tab" role="tab" data-tab="plan" id="t-plan">8-day plan<span class="count" id="planCount"></span></button>
+    <button class="tab" role="tab" data-tab="map" id="t-map">Map</button>
+    <button class="tab" role="tab" data-tab="summary" id="t-summary">Summary</button>
+  </div>
+</nav>
+
+<main class="wrap">
+  <!-- EXPLORE -->
+  <section class="view" id="v-explore" aria-labelledby="t-explore">
+    <div class="howto">
+      <h2>How to use this page</h2>
+      <ol>
+        <li>Browse the ideas below. Tap the heart to shortlist, and choose <b>Must do</b>, <b>Maybe</b> or <b>Skip</b>.</li>
+        <li>Use <b>Add to a day</b> on any card to build the plan. On a computer you can also drag items between days.</li>
+        <li>Check the <b>8-day plan</b> for days that look too full, then see them on the <b>Map</b>.</li>
+        <li>Open <b>Summary</b> to copy the plan as text or print it, with addresses and reservations to book.</li>
+      </ol>
+      <p class="small">Everything saves on this device automatically. A sample plan is filled in to start; change anything. Hours and prices were checked in October 2026 unless a card says otherwise.</p>
+    </div>
+
+    <div class="section-head"><h2>Good pairings</h2><p class="lede">Things that work well on the same day. Add the whole set in one tap.</p></div>
+    <div class="pairs" id="pairs"></div>
+
+    <div class="section-head"><h2>All ideas</h2></div>
+    <div class="filters">
+      <input class="search" id="q" type="search" aria-label="Search ideas" placeholder="Search: brunch, bridge, Stanford, wine…" autocomplete="off">
+      <div class="chiprow" id="catChips"><span class="lbl">Type</span></div>
+      <div class="chiprow" id="areaChips"><span class="lbl">Area</span></div>
+      <div class="chiprow"><span class="lbl">Show</span>
+        <button class="chip" id="favOnly" type="button" aria-pressed="false">Shortlist only</button>
+        <button class="chip" id="mustOnly" type="button" aria-pressed="false">Must-includes</button>
+        <button class="chip" id="hideSkip" type="button" aria-pressed="true">Hide skipped</button>
+        <button class="chip" id="clearF" type="button">Clear filters</button>
+      </div>
+      <p class="result-line" id="resultLine"></p>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- FAMILY -->
+  <section class="view" id="v-family" aria-labelledby="t-family" hidden>
+    <div class="family-band">
+      <span class="label-kicker">Family time in Burlingame</span>
+      <h2>Slow days close to home</h2>
+      <p>Not every day needs to be a tour. These are all within about 15 minutes of our house in Burlingame, about 25 minutes down 101 from his hotel. Put one or two on any day the planner marks as full, or make a whole day of them.</p>
+    </div>
+    <div class="grid" id="famGrid"></div>
+  </section>
+
+  <!-- PLAN -->
+  <section class="view" id="v-plan" aria-labelledby="t-plan" hidden>
+    <div class="section-head"><h2>The 8-day plan</h2><p class="lede">Day 1 is his late-evening arrival and Day 8 is the trip home, so the plan fills Days 2–7. Drive times are estimates from his hotel on Van Ness without heavy traffic. A day turns amber past about 5 hours and red past 9.</p></div>
+    <div class="tripbar">
+      <div class="field"><label for="who">Who's visiting</label><input id="who" type="text" placeholder="Dad" maxlength="40"></div>
+      <div class="field"><label for="start">First day of the visit</label><input id="start" type="date"></div>
+      <div class="btnrow">
+        <button class="btn" id="loadSample" type="button">Load sample plan</button>
+        <button class="btn danger" id="clearPlan" type="button">Clear plan</button>
+      </div>
+    </div>
+    <div class="hotel-strip"><span class="label-kicker">His hotel</span><p><b>Holiday Inn San Francisco – Golden Gateway</b>, 1500 Van Ness Ave (Nob Hill / Polk Village). On the California St cable car line, steps from Polk Street cafés. Parking $49/night with in-and-out; the garage height limit is 5′10″.</p></div>
+    <div class="banner" id="sampleBanner" hidden>
+      <p><b>This is a sample plan</b> built around opening days: Cotogna and Verjus on Thursday, Golden Gate Park on Friday (free Tea Garden hour, everything open), Marin on Saturday for weekend brunch and the Bay Model, family on Sunday. Move anything; changes save automatically.</p>
+    </div>
+    <div class="banner" id="dateBanner" hidden>
+      <p>Add the first day of the visit above to see dates and closed-day warnings (Cotogna is closed Sundays, Verjus Sundays and Mondays, Cavallo Point brunch is weekends only).</p>
+    </div>
+    <div class="tray" id="tray"></div>
+    <div class="days" id="days"></div>
+  </section>
+
+  <!-- MAP -->
+  <section class="view" id="v-map" aria-labelledby="t-map" hidden>
+    <div class="section-head"><h2>Map</h2><p class="lede">Pins are numbered and colored by day. The star is his hotel on Van Ness; the square is our home in Burlingame. Tap a pin for details.</p></div>
+    <div class="mapwrap">
+      <div class="mapctl">
+        <div class="chiprow">
+          <button class="chip" id="zBay" type="button" aria-pressed="true">Whole Bay Area</button>
+          <button class="chip" id="zSF" type="button" aria-pressed="false">San Francisco close-up</button>
+          <button class="chip" id="showIdeas" type="button" aria-pressed="false">Show unplanned ideas</button>
+        </div>
+      </div>
+      <div class="legend" id="legend"></div>
+      <div id="mapHost"></div>
+      <div class="mapinfo" id="mapInfo"><p>Tap any pin to see what it is and which day it's on.</p></div>
+      <div id="offmap"></div>
+    </div>
+  </section>
+
+  <!-- SUMMARY -->
+  <section class="view" id="v-summary" aria-labelledby="t-summary" hidden>
+    <div class="section-head"><h2>Summary</h2>
+      <div class="btnrow sum-actions">
+        <button class="btn primary" id="copyBtn" type="button">Copy as text</button>
+        <button class="btn" id="printBtn" type="button">Print</button>
+      </div>
+    </div>
+    <p class="framed-note" id="framedNote" hidden>Printing isn't available in this view. Copy the text, or open the downloaded HTML file in a browser to print.</p>
+    <div class="sum" id="sum"></div>
+    <textarea id="copyFallback" aria-label="Plan as text" hidden style="width:100%;min-height:240px;border-radius:12px;padding:12px;border:1px solid var(--line);background:var(--surface-2)"></textarea>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Details were checked online in October 2026 against official sites where possible (restaurant sites, NPS, Golden Gate Bridge District, SFMTA, FAMSF). Cards marked "not verified" are worth a quick call. Prices and hours change; confirm anything that needs a reservation when you book.</p>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+(function () {
+"use strict";
+const DAYS = 8;
+const HOME = { lat: 37.5779, lng: -122.3481 };
+const HOTEL = { lat: 37.7905, lng: -122.4222, name: "Holiday Inn San Francisco – Golden Gateway", addr: "1500 Van Ness Ave, San Francisco, CA 94109" };
+const KEY = "dadSFplan.v1";
+const START = "2026-10-28";
+const RESERVED = { 0: "Arrives late evening", 7: "Travel day" };
+const RES_NOTE = { 0: "Arrives late evening. Straight to the hotel; nothing planned.", 7: "Travel day. Leave time for hotel checkout and getting to the airport." };
+
+const ICON = {
+  food: '<path d="M7 3v7a2 2 0 0 0 2 2v9M11 3v7a2 2 0 0 1-2 2M9 3v6"/><path d="M17 21V3c-2.2 0-3.5 3-3.5 6.5S15 13 17 13"/>',
+  shopping: '<path d="M5 8h14l-1.2 13H6.2L5 8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/>',
+  outdoors: '<path d="M12 3l5 7h-3l4 6H6l4-6H7l5-7z"/><path d="M12 16v5M3 21h18"/>',
+  culture: '<path d="M3 9l9-5 9 5M5 9.5V18M9.5 9.5V18M14.5 9.5V18M19 9.5V18M3 21h18M4 18h16"/>',
+  family: '<path d="M3 11l9-7 9 7"/><path d="M5 10v11h14V10"/><path d="M10 21v-6h4v6"/>',
+  daytrip: '<path d="M5 16l1.6-5a2 2 0 0 1 1.9-1.4h7a2 2 0 0 1 1.9 1.4L19 16"/><path d="M3.5 16h17v3.5h-17z"/><path d="M7 19.5V21M17 19.5V21M7.5 17.8h.01M16.5 17.8h.01"/>'
+};
+const HEART = '<path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/>';
+const UP = '<path d="M6 14l6-6 6 6"/>', DOWN = '<path d="M6 10l6 6 6-6"/>', X = '<path d="M6 6l12 12M18 6L6 18"/>';
+const WAVES = '<path d="M0 20q20-10 40 0t40 0 40 0 40 0"/><path d="M0 34q20-10 40 0t40 0 40 0 40 0"/><path d="M0 48q20-10 40 0t40 0 40 0 40 0"/>';
+
+const CATS = { food: "Food & drink", shopping: "Shopping", outdoors: "Outdoors", culture: "Culture", family: "Family time", daytrip: "Day trip" };
+const AREAS = { sf: "San Francisco", pen: "Peninsula & Burlingame", marin: "Marin", trip: "Day trips" };
+const DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const DOWL = ["Sundays", "Mondays", "Tuesdays", "Wednesdays", "Thursdays", "Fridays", "Saturdays"];
+
+// checked: "yes" = confirmed Oct 2026 from official/current listings, "partial" = some details confirmed, "no" = not verified
+const A = [
+  { id: "stanford-mall", must: true, name: "Stanford Shopping Center", cat: "shopping", area: "pen", hood: "Palo Alto", lat: 37.4434, lng: -122.1717, hours: 2.5, cost: "Free to browse", drive: 40,
+    addr: "660 Stanford Shopping Center, Palo Alto, CA 94304",
+    desc: "Open-air shopping center with Neiman Marcus, Nordstrom, Bloomingdale's and 140+ shops among gardens and fountains. Easy walking, plenty of benches and good lunch spots.",
+    info: ["Center hours: Mon–Sat 10am–7pm, Sun 11am–6pm. Some stores keep their own hours.", "Free parking, including a 3-level garage by Bloomingdale's."],
+    checked: "yes", url: "https://www.simon.com/mall/stanford-shopping-center" },
+  { id: "stanford-campus", name: "Stanford Main Quad & Memorial Church", cat: "culture", area: "pen", hood: "Stanford campus", lat: 37.4275, lng: -122.1700, hours: 1.5, cost: "Free", drive: 42,
+    addr: "450 Jane Stanford Way, Stanford, CA 94305",
+    desc: "Sandstone arcades, the gold mosaic front of Memorial Church and the long view down Palm Drive. A flat, shaded walk five minutes from the shopping center.",
+    info: ["Grounds are open to visitors. Church opening hours vary with services and events."],
+    checked: "no", url: "https://visit.stanford.edu/" },
+  { id: "hoover-tower", name: "Hoover Tower", cat: "culture", area: "pen", hood: "Stanford campus", lat: 37.4274, lng: -122.1663, hours: 0.75, cost: "$8 deck (when open)", drive: 42,
+    addr: "550 Serra Mall (Jane Stanford Way), Stanford, CA 94305", closedUntil: "2027-01-25", daysTxt: "Deck closed to Jan 25, 2027",
+    desc: "The 285-foot campus landmark, built in 1941. Its observation deck normally looks out over the campus and, on clear days, to San Francisco.",
+    info: ["The observation deck is closed Aug 14, 2026 – Jan 25, 2027 (Hoover Institution). See it from outside unless the visit is after Jan 25.", "When open: $8 at the door, card or contactless only. No public restrooms in the tower."],
+    checked: "yes", url: "https://www.hoover.org/visit-us-hoover-tower" },
+  { id: "palo-alto-downtown", name: "Downtown Palo Alto", cat: "food", area: "pen", hood: "University Avenue", lat: 37.4447, lng: -122.1610, hours: 1.5, cost: "$–$$", drive: 40,
+    addr: "University Ave, Palo Alto, CA 94301",
+    desc: "Tree-lined main street of cafés, bookshops and restaurants, five minutes from the shopping center. Good for a relaxed lunch or coffee.",
+    info: ["Evvia, the Palo Alto sister of San Francisco's Kokkari, is just off University Ave."],
+    checked: "no" },
+  { id: "cavallo-brunch", must: true, name: "Weekend brunch at Cavallo Point", cat: "food", area: "marin", hood: "Fort Baker, Sausalito", lat: 37.8336, lng: -122.4778, hours: 1.75, cost: "$$$", drive: 20,
+    addr: "601 Murray Circle, Sausalito, CA 94965", resv: true, only: [0, 6], daysTxt: "Brunch Sat & Sun only",
+    onlyNote: "Cavallo Point brunch is Saturday and Sunday only; on weekdays Sula serves breakfast and lunch instead.",
+    resvHow: "Sula: reserve through cavallopoint.com (OpenTable). Farley is walk-in only.",
+    desc: "The Lodge at the Golden Gate sits in historic Fort Baker, right under the bridge. Sula's terrace looks across the bay to the city skyline.",
+    info: ["Sula weekend brunch: Sat & Sun 7am–2pm, reservations taken.", "Farley weekend brunch: Sat & Sun 11am–2pm, walk-in only.", "Ask for the terrace if the fog has lifted."],
+    checked: "yes", url: "https://www.cavallopoint.com/dine/" },
+  { id: "sausalito-waterfront", name: "Sausalito waterfront", cat: "outdoors", area: "marin", hood: "Bridgeway, Sausalito", lat: 37.8569, lng: -122.4782, hours: 2, cost: "Free", drive: 25,
+    addr: "Bridgeway, Sausalito, CA 94965",
+    desc: "A flat bayside promenade with galleries, ice cream and views back to the city. Drive a few minutes north to see the houseboat docks.",
+    info: ["Street parking is metered and fills up on sunny weekends."], checked: "no" },
+  { id: "battery-spencer", name: "Battery Spencer & Marin Headlands", cat: "outdoors", area: "marin", hood: "Marin Headlands", lat: 37.8278, lng: -122.4834, hours: 1, cost: "Free", drive: 22,
+    addr: "Conzelman Rd, Sausalito, CA 94965",
+    desc: "The postcard view looking down on the Golden Gate Bridge towers, a short walk from a small lot. Continue up Conzelman Road to Hawk Hill for more.",
+    info: ["The lot is small and busy midday; go early or late afternoon.", "Road conditions not checked. Look at nps.gov/goga before going."],
+    checked: "no", url: "https://www.nps.gov/goga/" },
+  { id: "sausalito-ferry", name: "Ferry between Sausalito and SF", cat: "outdoors", area: "marin", hood: "Sausalito ↔ Ferry Building", lat: 37.8564, lng: -122.4772, hours: 0.75, cost: "$14 ticket or $8.50 tap-to-pay", drive: 25,
+    addr: "Sausalito Ferry Terminal, Humboldt & Anchor St, Sausalito",
+    desc: "Golden Gate Ferry to the Ferry Building, passing Alcatraz and the skyline. Sit on the upper deck and bring a jacket.",
+    info: ["Adult fares from July 1, 2026: $14 paper ticket, $8.50 with Clipper or a contactless bank card.", "Schedules change; check goldengate.org before going. No service Thanksgiving, Christmas or New Year's Day.", "Blue & Gold's Sausalito route was suspended in May 2026, so use Golden Gate Ferry."],
+    checked: "yes", url: "https://www.goldengate.org/ferry/" },
+  { id: "waymo", must: true, name: "Waymo ride (no driver)", cat: "culture", area: "sf", hood: "Hotel → Marina → Ferry Building", lat: 37.7952, lng: -122.3950, hours: 0.5, cost: "About an Uber fare", drive: 0,
+    addr: "Pickup: his hotel, 1500 Van Ness Ave · drop-off: Ferry Building, San Francisco",
+    desc: "A ride in a car with nobody at the wheel. Suggested route: from his hotel down to the Marina, then along the waterfront past Fisherman's Wharf to the Ferry Building. About 15–20 minutes of very San Francisco scenery.",
+    info: ["Request it in the Waymo app, like Uber; no advance booking. It now serves San Francisco and the Peninsula down to San Jose, including Burlingame. At SFO it only picks up at the Rental Car Center.", "Easiest: request the ride from your own app and ride along. The app may not be offered in non-US app stores.", "Also good at night: Jackson Square back to the car after dinner, where the screen shows what the car sees."],
+    checked: "yes", url: "https://waymo.com/" },
+  { id: "cotogna", must: true, name: "Dinner at Cotogna", cat: "food", area: "sf", hood: "Jackson Square", lat: 37.7973, lng: -122.4036, hours: 2, cost: "$$$ (pastas $26–36)", drive: 12,
+    addr: "490 Pacific Ave, San Francisco, CA 94133", resv: true, book: 30, closed: [0], daysTxt: "Closed Sun",
+    resvHow: "SevenRooms, through cotognasf.com. Tables open on a rolling 30-day window and prime Thu–Sat dinners go fast. Bar seats for walk-ins.",
+    desc: "Rustic Italian from the team behind Quince: house-made pastas, wood-oven pizza and spit-roasted meats in a warm brick room on Jackson Square.",
+    info: ["Hours: Mon–Tue dinner 4:30–9pm; Wed–Thu 11:30am–9pm; Fri–Sat 11:30am–9:30pm; closed Sunday.", "A 6% surcharge is added to the bill.", "Lunch (Wed–Sat) is easier to book and serves much of the same menu.", "Phone (415) 775-8508."],
+    checked: "yes", url: "https://www.cotognasf.com/" },
+  { id: "verjus", must: true, name: "A drink at Verjus", cat: "food", area: "sf", hood: "Jackson Square", lat: 37.7959, lng: -122.4027, hours: 1, cost: "$$–$$$", drive: 12,
+    addr: "550 Washington St, San Francisco, CA 94111", resv: true, book: 7, closed: [0, 1], daysTxt: "Closed Sun & Mon",
+    resvHow: "Reservations open one week ahead on verjuscave.com. Walk-ins welcome at the bar.",
+    desc: "A Paris-style wine bar and bistro from Cotogna's owners, two blocks away near the Transamerica Pyramid. Wines by the glass and French small plates.",
+    info: ["Hours: Tue–Thu 4–10pm, Fri 4–11pm, Sat 11:30am–11pm; closed Sunday and Monday.", "Verjus moved to 550 Washington St when it reopened in 2024; older listings show 528."],
+    checked: "yes", url: "https://www.verjuscave.com/" },
+  { id: "balboa", must: true, name: "Balboa Cafe", cat: "food", area: "sf", hood: "Cow Hollow", lat: 37.7988, lng: -122.4360, hours: 1.5, cost: "$$", drive: 8,
+    addr: "3199 Fillmore St (at Greenwich), San Francisco, CA 94123",
+    desc: "A Cow Hollow saloon since 1913, the one you call Cafe Balboa. Known for the Balboa burger on a baguette and a lively weekend brunch.",
+    info: ["Listed hours: brunch Sat–Sun 10am–3pm, lunch Mon–Fri 11:30am–3pm, dinner from 4pm.", "Not on OpenTable. Listings disagree on hours, so call (415) 921-3944 before going."],
+    checked: "partial", url: "https://www.opentable.com/balboa-cafe-sf" },
+  { id: "fillmore-union", name: "Fillmore & Union Street shops", cat: "shopping", area: "sf", hood: "Pacific Heights / Cow Hollow", lat: 37.7897, lng: -122.4337, hours: 1.5, cost: "Free to browse", drive: 6,
+    addr: "Fillmore St (Jackson to Bush) and Union St, San Francisco",
+    desc: "Boutiques, bakeries and painted Victorians. Upper Fillmore is a short drive up the hill from Balboa Cafe; Union Street is two blocks away.",
+    info: ["Fillmore is steep between Union St and Pacific Heights; drive up and walk the flat stretch."], checked: "no" },
+  { id: "crissy-field", name: "Crissy Field & the Warming Hut", cat: "outdoors", area: "sf", hood: "Presidio", lat: 37.8040, lng: -122.4660, hours: 1.5, cost: "Free", drive: 12,
+    addr: "983 Marine Dr, San Francisco (Warming Hut)",
+    desc: "A flat bayfront path toward the Golden Gate Bridge. Walk as far as he likes; the Warming Hut café near the end is a good turnaround.",
+    info: [], checked: "no" },
+  { id: "presidio", name: "Presidio Tunnel Tops", cat: "outdoors", area: "sf", hood: "Presidio", lat: 37.8018, lng: -122.4567, hours: 1, cost: "Free", drive: 12,
+    addr: "210 Lincoln Blvd, San Francisco (Presidio Visitor Center)",
+    desc: "Parkland built over the freeway tunnels, with lawns, benches and a wide view of the bridge and Alcatraz.",
+    info: ["Food trucks and events vary by day; not checked."], checked: "no" },
+  { id: "palace-fine-arts", name: "Palace of Fine Arts", cat: "culture", area: "sf", hood: "Marina", lat: 37.8029, lng: -122.4484, hours: 0.75, cost: "Free", drive: 10,
+    addr: "3601 Lyon St, San Francisco, CA 94123",
+    desc: "The domed rotunda and lagoon from the 1915 Panama-Pacific Exposition. A short, flat loop with swans and benches.",
+    info: [], checked: "no" },
+  { id: "gg-bridge", name: "Walk onto the Golden Gate Bridge", cat: "outdoors", area: "sf", hood: "Presidio", lat: 37.8077, lng: -122.4750, hours: 1, cost: "Free (paid parking)", drive: 15,
+    addr: "Golden Gate Bridge Welcome Center, south end, San Francisco",
+    desc: "Walk out from the south end to the first tower and back. Windy and loud, and unforgettable.",
+    info: ["Driving north over the bridge is free. The toll is charged southbound only: $10.50 as a one-time payment online, $11.25 if billed by mail (from July 1, 2026)."],
+    checked: "yes", url: "https://www.goldengate.org/" },
+  { id: "de-young", name: "de Young Museum", cat: "culture", area: "sf", hood: "Golden Gate Park", lat: 37.7715, lng: -122.4686, hours: 2, cost: "$$ (see famsf.org)", drive: 15,
+    addr: "50 Hagiwara Tea Garden Dr, San Francisco, CA 94118", resv: true, closed: [1], daysTxt: "Closed Mon",
+    resvHow: "Timed tickets at famsf.org; advance purchase encouraged.",
+    desc: "Art of the Americas, Africa and Oceania, plus a free observation tower with a 360° view over the park.",
+    info: ["Hours: Tue–Sun 9:30am–5:15pm, closed Mondays. Hamon Tower closes at 4:30pm.", "Special exhibition Treasures of the Pharaohs runs through Jan 31, 2027.", "Lower-level restrooms closed Oct 26 – Nov 19 for renovation.", "Ticket prices not confirmed here; check when booking."],
+    checked: "yes", url: "https://www.famsf.org/visit/de-young" },
+  { id: "tea-garden", name: "Japanese Tea Garden", cat: "outdoors", area: "sf", hood: "Golden Gate Park", lat: 37.7702, lng: -122.4703, hours: 1, cost: "$12–16 (non-SF residents)", drive: 15,
+    addr: "75 Hagiwara Tea Garden Dr, San Francisco, CA 94118",
+    desc: "Created for the 1894 Midwinter Fair: an arched drum bridge, pagoda, koi ponds and a tea house.",
+    info: ["Opens 9am daily. Last entry 5:30pm (Mar–Oct), 4:30pm (Nov–Feb).", "Free for everyone Mon, Wed and Fri, 9–10am.", "Some paths have steps and the drum bridge is steep; it can be skipped."],
+    checked: "yes", url: "https://gggp.org/admissions-hours/" },
+  { id: "conservatory", name: "Conservatory of Flowers", cat: "outdoors", area: "sf", hood: "Golden Gate Park", lat: 37.7721, lng: -122.4602, hours: 1, cost: "$12 (non-SF residents)", drive: 12,
+    addr: "100 John F Kennedy Dr, San Francisco, CA 94118", closed: [3], daysTxt: "Closed Wed",
+    desc: "A Victorian glass greenhouse from 1879 filled with orchids, water lilies and rare tropical plants.",
+    info: ["Hours 10am–4:30pm, last entry 4pm; closed Wednesdays.", "Free for everyone on the first Tuesday of the month.", "After dark, a free light show plays on the building."],
+    checked: "yes", url: "https://gggp.org/admissions-hours/" },
+  { id: "ferry-building", name: "Ferry Building Marketplace", cat: "food", area: "sf", hood: "Embarcadero", lat: 37.7955, lng: -122.3937, hours: 1.5, cost: "$–$$", drive: 12,
+    addr: "1 Ferry Building, San Francisco, CA 94111",
+    desc: "Food hall in the 1898 ferry terminal: oysters, cheese, coffee and chocolate. Benches on the back plaza face the Bay Bridge.",
+    info: ["Farmers market: Saturday 8am–2pm (the big one, 100+ vendors), Tuesday and Thursday 10am–2pm."],
+    checked: "yes", url: "https://www.ferrybuildingmarketplace.com/" },
+  { id: "cable-car", name: "Cable car ride", cat: "culture", area: "sf", hood: "California St line, from the hotel corner", lat: 37.7921, lng: -122.4092, hours: 1, cost: "$9 a ride (2026)", drive: 2,
+    addr: "California St & Van Ness Ave, right at the hotel",
+    desc: "His hotel sits on the California Street line: board at Van Ness and ride over Nob Hill and through Chinatown to the Financial District. For the classic Alcatraz view, the Powell–Hyde line runs a few blocks east.",
+    info: ["$9 single ride today. SFMTA approved $12 single rides and an $18 day pass starting in January 2027.", "The California St line usually has a much shorter wait than the Powell St turnaround."],
+    checked: "yes", url: "https://www.sfmta.com/" },
+  { id: "alcatraz", name: "Alcatraz Island", cat: "culture", area: "sf", hood: "Pier 33", lat: 37.8086, lng: -122.4050, hours: 3, cost: "$47.95 adult day tour", drive: 12,
+    addr: "Alcatraz Landing, Pier 33, The Embarcadero, San Francisco", resv: true, book: 90,
+    resvHow: "Only at cityexperiences.com, the official seller. Tickets release 90 days ahead and often sell out weeks before. Refundable up to 72 hours ahead.",
+    desc: "Ferry to the former federal prison, with the cellhouse audio tour narrated by former officers and inmates.",
+    info: ["Day Tour $47.95 adult; first ferries around 8:45am. Plan 2.5–3 hours.", "The road from the dock up to the cellhouse is steep. Ask about the accessibility shuttle if walking uphill is hard.", "Closed Thanksgiving, Christmas and New Year's Day. Beware resellers selling cruises that don't land."],
+    checked: "yes", url: "https://www.cityexperiences.com/san-francisco/city-cruises/alcatraz/" },
+  { id: "chinatown", name: "Chinatown & Grant Avenue", cat: "culture", area: "sf", hood: "Chinatown", lat: 37.7906, lng: -122.4057, hours: 1.5, cost: "Free; dim sum $$", drive: 8,
+    addr: "Dragon Gate, Grant Ave & Bush St, San Francisco",
+    desc: "Enter through the Dragon Gate and walk Grant Avenue and Stockton Street: tea shops, bakeries, temples and alleys. Pair with dim sum.",
+    info: [], checked: "no" },
+  { id: "coit-tower", name: "Coit Tower & North Beach", cat: "culture", area: "sf", hood: "Telegraph Hill", lat: 37.8024, lng: -122.4058, hours: 1.5, cost: "Elevator about $10", drive: 12,
+    addr: "1 Telegraph Hill Blvd, San Francisco, CA 94133",
+    desc: "1930s murals on the ground floor (free) and a 360° view from the top. Lunch below in North Beach's Italian cafés.",
+    info: ["Elevator price and hours not confirmed for 2026; roughly $8–10 for non-residents, about 10am–5pm in winter.", "About 40 steps above the elevator. Take a taxi up the hill; parking is very limited."],
+    checked: "no" },
+  { id: "lands-end", name: "Lands End & Legion of Honor", cat: "outdoors", area: "sf", hood: "Outer Richmond", lat: 37.7849, lng: -122.5050, hours: 2, cost: "Free; museum extra", drive: 18,
+    addr: "680 Point Lobos Ave (Lands End Lookout), San Francisco",
+    desc: "A cliffside trail with bridge views and the ruins of Sutro Baths. The Legion of Honor art museum is a short drive away.",
+    info: ["Legion of Honor: Tue–Sun 9:30am–5:15pm.", "The trail has stairs and uneven stretches; the overlook by the visitor center is easy."],
+    checked: "partial", url: "https://www.famsf.org/visit/legion-of-honor" },
+  { id: "kokkari", name: "Dinner at Kokkari", cat: "food", area: "sf", hood: "Jackson Square", lat: 37.7970, lng: -122.3994, hours: 2, cost: "$$$", drive: 12,
+    addr: "200 Jackson St, San Francisco, CA 94111", resv: true, book: 21,
+    resvHow: "OpenTable. Book two to three weeks out for a weekend dinner.",
+    desc: "A warm, fire-lit Greek taverna known for lamb chops and moussaka. Two blocks from Verjus; a good second big dinner.",
+    info: ["Lunch on weekdays, dinner nightly.", "Valet parking is currently unavailable."], checked: "yes", url: "https://www.opentable.com/kokkari-estiatorio" },
+  { id: "zuni", name: "Zuni Café", cat: "food", area: "sf", hood: "Hayes Valley", lat: 37.7736, lng: -122.4215, hours: 2, cost: "$$$", drive: 8,
+    addr: "1658 Market St, San Francisco, CA 94102", resv: true, resvHow: "OpenTable.",
+    desc: "A San Francisco institution since 1979. Order the brick-oven roast chicken with bread salad for two early; it takes about an hour.",
+    info: ["Hours not checked; confirm when booking."], checked: "partial", url: "https://www.opentable.com/zuni-cafe" },
+  { id: "muir-woods", name: "Muir Woods redwoods", cat: "outdoors", area: "marin", hood: "Mill Valley", lat: 37.8970, lng: -122.5811, hours: 2, cost: "$15 adult + $10 parking", drive: 45,
+    addr: "1 Muir Woods Rd, Mill Valley, CA 94941", resv: true,
+    resvHow: "Parking reservation required at gomuirwoods.com; it can't be bought on site. Download the pass first, since there's little cell signal at the park.",
+    desc: "Old-growth coast redwoods along a flat boardwalk loop. Cool and quiet even on warm days.",
+    info: ["Entrance $15 per adult (16+); parking reservation $10 per car. Open 9am to sunset.", "The weekend shuttle from Larkspur runs only through October.", "Non-US residents pay the regular fee on national fee-free days."],
+    checked: "yes", url: "https://gomuirwoods.com/" },
+  { id: "west-marine", name: "West Marine, Sausalito store", cat: "shopping", area: "marin", hood: "Marin City (just north of Sausalito)", lat: 37.8722, lng: -122.5108, hours: 1.25, cost: "Free to browse", drive: 25,
+    addr: "192 Donahue St, Marin City, CA 94965",
+    desc: "A big boating store: sailing gear, rigging, marine electronics, life jackets and a fishing shop. Five minutes up the road from the Sausalito waterfront.",
+    info: ["Hours: Mon–Fri 8am–6pm, Sat–Sun 9am–6pm. Call before holidays: (415) 289-0835."],
+    checked: "yes", url: "https://www.westmarine.com/stores/marin-city-ca-1299/" },
+  { id: "bay-model", name: "Bay Model Visitor Center", cat: "culture", area: "marin", hood: "Sausalito waterfront", lat: 37.8645, lng: -122.4935, hours: 1, cost: "Free", drive: 25,
+    addr: "2100 Bridgeway, Sausalito, CA 94965", closed: [0, 1], daysTxt: "Tue–Sat only",
+    desc: "A working hydraulic model of the entire San Francisco Bay and Delta, more than an acre in size, built by the Army Corps of Engineers in a WWII shipyard warehouse. Made for someone who loves boats and tides.",
+    info: ["Tuesday–Saturday 9am–4pm; closed Sundays, Mondays and federal holidays. Free, with free parking.", "Run by the Army Corps of Engineers; call (415) 332-3871 to confirm before going."],
+    checked: "partial" },
+  { id: "jeremiah-obrien", name: "SS Jeremiah O'Brien Liberty Ship", cat: "culture", area: "sf", hood: "Pier 35, Embarcadero", lat: 37.8090, lng: -122.4085, hours: 1.5, cost: "$15 seniors 62+ · $20 adults", drive: 12,
+    addr: "Pier 35, The Embarcadero, San Francisco, CA 94133",
+    desc: "One of the last working WWII Liberty ships, which sailed at D-Day. Walk the decks, the bridge and the engine room with its triple-expansion steam engine. Next door to the Alcatraz pier.",
+    info: ["Open daily 10am–4pm. Tickets at the booth on the day: $20 adults, $15 seniors (62+) and veterans $10.", "Expect steep stairs between decks; the main deck and bridge are the easiest parts."],
+    checked: "yes", url: "https://ssjeremiahobrien.org/pages/visit" },
+  { id: "maritime-park", name: "Aquatic Park & Maritime Museum", cat: "outdoors", area: "sf", hood: "Fisherman's Wharf west end", lat: 37.8066, lng: -122.4228, hours: 1, cost: "Free", drive: 5,
+    addr: "900 Beach St (Aquatic Park Bathhouse), San Francisco, CA 94109",
+    desc: "A short ride straight up Van Ness from the hotel: the 1930s Streamline-style bathhouse museum, the curved Municipal Pier and views of the old ships and swimmers in the cove.",
+    info: ["The historic ships at Hyde Street Pier have been moved to Mare Island for renovation and can't be boarded right now (NPS).", "Museum hours not confirmed; call (415) 447-5000."],
+    checked: "partial", url: "https://www.nps.gov/safr/" },
+  { id: "half-moon-bay", name: "Half Moon Bay coast", cat: "daytrip", area: "trip", hood: "Half Moon Bay", lat: 37.4636, lng: -122.4286, hours: 4, cost: "$–$$", drive: 45,
+    addr: "Main St, Half Moon Bay & Pillar Point Harbor, CA",
+    desc: "The closest day trip: over Highway 92 to a small-town Main Street, the fishing harbor at Pillar Point and cliff-top walks. Seafood lunch by the water.",
+    info: ["Easy and flexible; details not checked."], checked: "no" },
+  { id: "napa", name: "Napa Valley (Yountville)", cat: "daytrip", area: "trip", hood: "Napa Valley", lat: 38.4016, lng: -122.3608, hours: 7, cost: "$$$", drive: 75, offmap: true,
+    addr: "Yountville, CA 94599", resv: true, resvHow: "Most wineries require tasting reservations; book a few days ahead. Pick a designated driver or a tour.",
+    desc: "Wine country: Yountville's walkable main street, two tastings and a long lunch. About 1.5–2 hours each way with traffic.",
+    info: ["Not verified; winery policies vary."], checked: "no" },
+  { id: "carmel", name: "Carmel-by-the-Sea & 17-Mile Drive", cat: "daytrip", area: "trip", hood: "Monterey Peninsula", lat: 36.5552, lng: -121.9233, hours: 8, cost: "$$; 17-Mile Drive ~$12/car", drive: 130, offmap: true,
+    addr: "Ocean Ave, Carmel-by-the-Sea, CA 93921",
+    desc: "Storybook cottages and a white-sand beach, then the coastal 17-Mile Drive past the Lone Cypress and Pebble Beach. A long but beautiful day.",
+    info: ["17-Mile Drive gate fee about $12.25 per car in 2026 (sources differ slightly), refunded with a $35+ purchase at Pebble Beach Resorts restaurants. Open sunrise to sunset."],
+    checked: "partial" },
+  { id: "burlingame-ave", fam: true, repeat: true, name: "Burlingame Avenue stroll & coffee", cat: "family", area: "pen", hood: "Downtown Burlingame", lat: 37.5784, lng: -122.3466, hours: 1.5, cost: "$", drive: 25,
+    addr: "Burlingame Ave, Burlingame, CA 94010",
+    desc: "Shops, bakeries and cafés on a walkable, tree-lined street minutes from our house. An easy morning or late afternoon.",
+    info: [], checked: "no" },
+  { id: "bay-trail", fam: true, repeat: true, name: "Bayside walk on the Bay Trail", cat: "family", area: "pen", hood: "Burlingame shoreline", lat: 37.5905, lng: -122.3428, hours: 1, cost: "Free", drive: 25,
+    addr: "Bay Trail along Airport Blvd, Burlingame, CA",
+    desc: "A flat, paved shoreline path with bay views and planes gliding into SFO. Good after dinner.",
+    info: [], checked: "no" },
+  { id: "coyote-point", fam: true, name: "Coyote Point Recreation Area", cat: "family", area: "pen", hood: "San Mateo", lat: 37.5893, lng: -122.3237, hours: 2, cost: "$6 per car; CuriOdyssey ~$30", drive: 25,
+    addr: "1701 Coyote Point Dr, San Mateo, CA 94401",
+    desc: "Bayfront park with a beach, picnic lawns and promenade. CuriOdyssey, a small science museum and rescued-animal center, is inside the park and fun for all ages.",
+    info: ["$6 vehicle entry (2025 listing); CuriOdyssey about $30 per person (2026 listing). Confirm current prices."], checked: "partial" },
+  { id: "burlingame-dinner", fam: true, repeat: true, name: "Casual Burlingame dinner", cat: "food", area: "pen", hood: "Downtown Burlingame", lat: 37.5788, lng: -122.3452, hours: 1.5, cost: "$$", drive: 25,
+    addr: "Burlingame Ave, Lorton Ave & Park Rd, Burlingame",
+    desc: "Local options minutes away: Pizzeria Delfina (1444 Burlingame Ave), Mykonos Meze (Lorton Ave), or Rasa (209 Park Rd) for modern Indian.",
+    info: ["All appear on 2026 listings; hours not checked."], checked: "partial" },
+  { id: "crystal-springs", fam: true, name: "Crystal Springs Regional Trail", cat: "outdoors", area: "pen", hood: "Hillsborough hills", lat: 37.5430, lng: -122.3640, hours: 1.5, cost: "Free", drive: 30,
+    addr: "Sawyer Camp segment, Crystal Springs Rd & Skyline Blvd",
+    desc: "A paved, nearly flat trail beside the reservoirs above Hillsborough. Oaks, deer and no cars.",
+    info: [], checked: "no" },
+  { id: "millbrae-hillsborough", fam: true, name: "Millbrae lunch & a Hillsborough drive", cat: "family", area: "pen", hood: "Millbrae / Hillsborough", lat: 37.5985, lng: -122.3870, hours: 2, cost: "$–$$", drive: 20,
+    addr: "Broadway & El Camino Real, Millbrae",
+    desc: "Millbrae has some of the Peninsula's best Cantonese and dim sum. Afterward, a slow drive through Hillsborough's leafy streets.",
+    info: [], checked: "no" },
+  { id: "home-dinner", fam: true, repeat: true, home: true, name: "Easy dinner at our place", cat: "family", area: "pen", hood: "Our home, Burlingame", lat: HOME.lat, lng: HOME.lng, hours: 2, cost: "Free", drive: 25,
+    addr: "Home, Burlingame",
+    desc: "Cook together, grill, or order in. A quiet night after a big day.", info: [], checked: "na" },
+  { id: "slow-morning", fam: true, repeat: true, hotel: true, name: "Slow morning at the hotel", cat: "family", area: "sf", hood: "Holiday Inn, Van Ness Ave", lat: HOTEL.lat, lng: HOTEL.lng, hours: 2, cost: "Free", drive: 0,
+    addr: "1500 Van Ness Ave, San Francisco",
+    desc: "Late breakfast, the rooftop pool, a walk along Polk Street's cafés. Put one on any day that looks too full.", info: [], checked: "na" }
+];
+const byId = Object.fromEntries(A.map(a => [a.id, a]));
+
+const PAIRS = [
+  { t: "Jackson Square evening", ids: ["verjus", "cotogna"], txt: "Verjus and Cotogna are two blocks apart and share owners. A glass of wine at Verjus from 4pm, then dinner at Cotogna. Both are open Tuesday to Saturday." },
+  { t: "Sausalito by the bay", ids: ["cavallo-brunch", "battery-spencer", "sausalito-waterfront", "sausalito-ferry"], txt: "Weekend brunch at Cavallo Point, the bridge view at Battery Spencer, then the waterfront. For the ferry: park at the Ferry Building, ride over, and take a 5-minute taxi to Cavallo Point." },
+  { t: "Stanford day", ids: ["stanford-mall", "palo-alto-downtown", "stanford-campus"], txt: "Shopping in the morning, lunch on University Avenue, then a slow walk through the Main Quad. Hoover Tower's deck is closed until Jan 25, 2027." },
+  { t: "Cow Hollow to the bridge", ids: ["balboa", "fillmore-union", "palace-fine-arts", "crissy-field"], txt: "Lunch at Balboa Cafe, browse Union and Fillmore, then the Palace of Fine Arts and a flat walk on Crissy Field toward the bridge." },
+  { t: "Golden Gate Park morning", ids: ["tea-garden", "de-young", "conservatory"], txt: "The Tea Garden is free 9–10am Mon, Wed and Fri. The de Young closes Mondays and the Conservatory Wednesdays, so Friday suits all three." },
+  { t: "A ride with no driver", ids: ["ferry-building", "waymo", "palace-fine-arts"], txt: "Lunch at the Ferry Building, then a Waymo across the city to the Palace of Fine Arts." },
+  { t: "A boat lover's Saturday in Marin", ids: ["cavallo-brunch", "bay-model", "west-marine", "sausalito-waterfront"], txt: "Saturday is the one day that fits all of it: brunch at Cavallo Point, the Bay Model (Tue–Sat), West Marine and the waterfront, all within 10 minutes of each other." },
+  { t: "Ships on the waterfront", ids: ["alcatraz", "jeremiah-obrien", "maritime-park"], txt: "An early Alcatraz ferry from Pier 33, then the Liberty ship next door at Pier 35, and Aquatic Park on the way back to the hotel." },
+  { t: "The Rock and the hill", ids: ["alcatraz", "coit-tower", "chinatown"], txt: "An early Alcatraz ferry, then Coit Tower and lunch in North Beach or Chinatown." }
+];
+
+const SAMPLE = [
+  [],
+  ["slow-morning", "waymo", "ferry-building", "verjus", "cotogna"],
+  ["tea-garden", "de-young", "conservatory", "balboa"],
+  ["cavallo-brunch", "bay-model", "west-marine", "sausalito-waterfront"],
+  ["burlingame-ave", "coyote-point", "home-dinner"],
+  ["stanford-mall", "palo-alto-downtown", "stanford-campus"],
+  ["alcatraz", "jeremiah-obrien", "maritime-park"],
+  []
+];
+
+// ---------- state ----------
+function blank() { const n = Array(DAYS).fill(""); n[0] = RES_NOTE[0]; n[7] = RES_NOTE[7]; return { who: "", start: START, fav: {}, rate: {}, days: Array.from({ length: DAYS }, () => []), notes: n, sample: false, theme: "auto", tab: "explore", v: 2 }; }
+let S = blank();
+function load() {
+  let raw = null;
+  try { raw = localStorage.getItem(KEY); } catch (e) {}
+  if (raw) {
+    try {
+      const d = JSON.parse(raw);
+      S = Object.assign(blank(), d);
+      S.days = (S.days || []).slice(0, DAYS).map(l => (l || []).filter(id => byId[id]));
+      while (S.days.length < DAYS) S.days.push([]);
+      S.notes = (S.notes || []).slice(0, DAYS); while (S.notes.length < DAYS) S.notes.push("");
+      if (S.sample) S.days = SAMPLE.map(d => d.slice());
+      if (!S.v || S.v < 2) {
+        if (!S.start) S.start = START;
+        [0, 7].forEach(i => { if (!S.notes[i]) S.notes[i] = RES_NOTE[i]; });
+        S.v = 2; save();
+      }
+      return;
+    } catch (e) {}
+  }
+  S = blank();
+  S.days = SAMPLE.map(d => d.slice());
+  S.sample = true;
+  ["cotogna", "verjus", "cavallo-brunch", "stanford-mall", "waymo", "balboa"].forEach(id => { S.rate[id] = "must"; S.fav[id] = true; });
+}
+function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
+
+// ---------- helpers ----------
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+function fmtDur(h) {
+  if (h < 1) return Math.round(h * 60) + " min";
+  const w = Math.floor(h), f = h - w;
+  const fr = f === 0 ? "" : f === 0.25 ? "¼" : f === 0.5 ? "½" : f === 0.75 ? "¾" : "." + Math.round(f * 10);
+  return w + fr + " h";
+}
+function fmtDrive(m) {
+  if (!m) return "At the hotel";
+  if (m < 60) return "~" + m + " min";
+  const h = Math.floor(m / 60), r = m % 60;
+  return "~" + h + " h" + (r ? " " + r + " min" : "");
+}
+function parseDate(s) { if (!s) return null; const [y, m, d] = s.split("-").map(Number); if (!y || !m || !d) return null; return new Date(y, m - 1, d); }
+function dayDate(i) { const s = parseDate(S.start); if (!s) return null; const d = new Date(s); d.setDate(d.getDate() + i); return d; }
+function fmtDate(d) { return d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }); }
+function whoName() { return (S.who || "").trim() || "Dad"; }
+function daysOf(id) { const r = []; S.days.forEach((l, i) => { if (l.includes(id)) r.push(i); }); return r; }
+function dayOpt(i) { const d = dayDate(i); return "Day " + (i + 1) + (d ? " · " + fmtDate(d) : "") + (RESERVED[i] ? " (" + (i === 0 ? "arrival" : "travel") + ")" : ""); }
+function dayColor(i) { return "var(--d" + (i + 1) + ")"; }
+function icon(name, cls) { return '<svg class="' + (cls || "icon") + '" viewBox="0 0 24 24" aria-hidden="true">' + ICON[name] + "</svg>"; }
+
+let toastT = null;
+function toast(msg) { const t = $("#toast"); t.textContent = msg; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => { t.hidden = true; }, 2200); }
+
+function addToDay(id, d, silent) {
+  const a = byId[id]; if (!a || d < 0 || d >= DAYS) return;
+  if (!a.repeat) S.days.forEach((l, i) => { if (i !== d) { const k = l.indexOf(id); if (k >= 0) l.splice(k, 1); } });
+  if (!S.days[d].includes(id)) S.days[d].push(id);
+  S.sample = false; save();
+  if (!silent) toast(a.name + " → Day " + (d + 1));
+}
+function removeFrom(d, idx) { S.days[d].splice(idx, 1); S.sample = false; save(); }
+
+function dayStats(i) {
+  const ids = S.days[i]; const items = ids.map(id => byId[id]);
+  if (!items.length) return { hrs: 0, travel: 0, total: 0, status: "empty", label: RESERVED[i] || "Open day" };
+  const act = items.reduce((s, a) => s + a.hours, 0);
+  const maxDrive = Math.max(0, ...items.map(a => a.drive));
+  const away = items.filter(a => !a.hotel).length;
+  const travel = (2 * maxDrive) / 60 + 0.25 * Math.max(0, away - 1);
+  const total = act + travel;
+  let status = "easy", label = "Easy day";
+  if (total > 9 || items.length >= 6) { status = "packed"; label = "Too packed"; }
+  else if (total > 5) { status = "full"; label = "Full day"; }
+  return { hrs: act, travel, total, status, label };
+}
+function dayWarnings(i) {
+  const w = [];
+  const items = S.days[i].map(id => byId[id]);
+  const d = dayDate(i);
+  if (d) {
+    const dow = d.getDay();
+    items.forEach(a => {
+      if (a.closed && a.closed.includes(dow)) w.push({ t: a.name + " is closed on " + DOWL[dow] + ".", hard: true });
+      if (a.only && !a.only.includes(dow)) w.push({ t: a.onlyNote, hard: true });
+      if (a.closedUntil && d < parseDate(a.closedUntil)) w.push({ t: "Hoover Tower's deck is closed on this date (reopens Jan 25, 2027).", hard: false });
+    });
+  }
+  if (d && d.getMonth() === 10 && d.getDay() === 0 && d.getDate() <= 7) w.push({ t: "Clocks go back an hour overnight (end of daylight saving time); sunset is around 5pm from here on.", hard: false });
+  const areas = new Set(items.filter(a => !a.home).map(a => a.area));
+  if (areas.has("marin") && items.some(a => a.area === "pen" && a.drive >= 35)) w.push({ t: "Marin and Palo Alto on the same day means a lot of driving.", hard: false });
+  if (areas.has("trip") && items.filter(a => !a.home && a.area !== "trip").length > 1) w.push({ t: "Day trips fill most of a day; consider moving the other stops.", hard: false });
+  const st = dayStats(i);
+  if (st.status === "packed") w.push({ t: "About " + Math.round(st.total) + " hours with driving. Move something or add a slow morning.", hard: true });
+  return w;
+}
+
+// ---------- bridge art ----------
+function drawBridge() {
+  const svg = $("#bridgeArt");
+  const q = (p0, p1, p2, t) => (1 - t) * (1 - t) * p0 + 2 * (1 - t) * t * p1 + t * t * p2;
+  let h = "";
+  const segs = [[0, 52, 45, 30, 92, 14], [92, 14, 160, 78, 228, 14], [228, 14, 275, 30, 320, 52]];
+  segs.forEach(s => { for (let t = 0.08; t < 1; t += 0.08) { const x = q(s[0], s[2], s[4], t), y = q(s[1], s[3], s[5], t); if (y < 64) h += '<line class="hanger" x1="' + x.toFixed(1) + '" y1="' + y.toFixed(1) + '" x2="' + x.toFixed(1) + '" y2="66"/>'; } });
+  svg.innerHTML =
+    h +
+    '<path class="cable" d="M0 52 Q45 30 92 14 Q160 78 228 14 Q275 30 320 52"/>' +
+    '<line class="deck" x1="0" y1="66" x2="320" y2="66"/>' +
+    '<path class="tower" d="M88 8V82M96 8V82M88 22H96M88 40H96M88 58H96M224 8V82M232 8V82M224 22H232M224 40H232M224 58H232"/>' +
+    '<path class="water" d="M0 80q10-4 20 0t20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0"/>' +
+    '<path class="water" d="M10 87q10-4 20 0t20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0"/>';
+}
+
+// ---------- tabs ----------
+const TABS = ["explore", "family", "plan", "map", "summary"];
+function setTab(t, noScroll) {
+  if (!TABS.includes(t)) t = "explore";
+  S.tab = t; save();
+  TABS.forEach(x => {
+    $("#t-" + x).setAttribute("aria-selected", x === t ? "true" : "false");
+    $("#v-" + x).hidden = x !== t;
+  });
+  if (t === "plan") renderPlan();
+  if (t === "map") renderMap();
+  if (t === "summary") renderSummary();
+  if (t === "family") renderFamily();
+  if (t === "explore") renderGrid();
+  if (!noScroll) window.scrollTo({ top: 0 });
+}
+
+// ---------- explore ----------
+const F = { cats: new Set(), areas: new Set(), q: "", fav: false, must: false, hideSkip: true };
+function buildChips() {
+  const cr = $("#catChips"), ar = $("#areaChips");
+  Object.entries(CATS).forEach(([k, v]) => cr.insertAdjacentHTML("beforeend", '<button class="chip" type="button" data-cat="' + k + '" aria-pressed="false">' + v + "</button>"));
+  Object.entries(AREAS).forEach(([k, v]) => ar.insertAdjacentHTML("beforeend", '<button class="chip" type="button" data-area="' + k + '" aria-pressed="false">' + v + "</button>"));
+}
+function cardHTML(a) {
+  const fav = !!S.fav[a.id], r = S.rate[a.id] || "";
+  const inDays = daysOf(a.id);
+  const opts = ['<option value="">' + (inDays.length ? "Add to another day…" : "Add to a day…") + "</option>"];
+  for (let i = 0; i < DAYS; i++) opts.push('<option value="' + i + '">' + dayOpt(i) + "</option>");
+  const flags = [];
+  if (a.resv) flags.push('<span class="flag resv">Reservation needed</span>');
+  if (a.daysTxt) flags.push('<span class="flag ' + (a.closedUntil ? "closed" : "days") + '">' + esc(a.daysTxt) + "</span>");
+  inDays.forEach(i => flags.push('<span class="flag inday">In Day ' + (i + 1) + "</span>"));
+  const vnote = a.checked === "yes" ? "Checked October 2026." : a.checked === "partial" ? "Partly checked October 2026; confirm hours before going." : a.checked === "no" ? "Not verified online; general guidance." : "";
+  return '<article class="card' + (r === "skip" ? " skipped" : "") + '" data-id="' + a.id + '" style="--cc:var(--c-' + a.cat + ')">' +
+    '<div class="art">' + icon(a.cat) + '<div class="art-txt"><span class="cat">' + CATS[a.cat] + '</span><span class="area">' + AREAS[a.area] + "</span></div>" +
+    '<svg class="waves" viewBox="0 0 160 60" aria-hidden="true">' + WAVES + "</svg>" + (a.must ? '<span class="must-flag">Must-include</span>' : "") + "</div>" +
+    '<div class="cbody"><h3>' + esc(a.name) + '</h3><p class="hood">' + esc(a.hood) + "</p>" +
+    '<dl class="facts"><div><dt>Time</dt><dd>' + fmtDur(a.hours) + '</dd></div><div><dt>Cost</dt><dd>' + esc(a.cost) + '</dd></div><div><dt>From hotel</dt><dd>' + fmtDrive(a.drive) + "</dd></div></dl>" +
+    (flags.length ? '<div class="flags">' + flags.join("") + "</div>" : "") +
+    '<p class="desc">' + esc(a.desc) + "</p>" +
+    '<details class="more"><summary>Good to know</summary>' +
+    (a.resvHow ? '<p class="addr"><b>Booking:</b> ' + esc(a.resvHow) + "</p>" : "") +
+    (a.info && a.info.length ? "<ul>" + a.info.map(x => "<li>" + esc(x) + "</li>").join("") + "</ul>" : "") +
+    '<p class="addr"><b>Where:</b> ' + esc(a.addr) + "</p>" +
+    (a.url ? '<p class="addr"><a href="' + a.url + '" target="_blank" rel="noopener">Official site</a></p>' : "") +
+    (vnote ? '<p class="vnote">' + vnote + "</p>" : "") + "</details></div>" +
+    '<div class="cactions"><div class="rate-row"><button class="heart" type="button" data-act="fav" aria-pressed="' + fav + '" aria-label="' + (fav ? "Remove from shortlist" : "Add to shortlist") + '"><svg viewBox="0 0 24 24" aria-hidden="true">' + HEART + "</svg></button>" +
+    '<div class="seg" role="group" aria-label="Rating">' +
+    ["must", "maybe", "skip"].map(k => '<button type="button" data-act="rate" data-r="' + k + '" aria-pressed="' + (r === k) + '">' + { must: "Must do", maybe: "Maybe", skip: "Skip" }[k] + "</button>").join("") +
+    "</div></div>" +
+    '<select class="addsel" data-act="add" aria-label="Add ' + esc(a.name) + ' to a day" id="add-' + a.id + '">' + opts.join("") + "</select></div></article>";
+}
+function matches(a) {
+  if (F.cats.size && !F.cats.has(a.cat)) return false;
+  if (F.areas.size && !F.areas.has(a.area)) return false;
+  if (F.fav && !S.fav[a.id]) return false;
+  if (F.must && !a.must) return false;
+  if (F.hideSkip && S.rate[a.id] === "skip") return false;
+  if (F.q) { const h = (a.name + " " + a.hood + " " + a.desc + " " + CATS[a.cat] + " " + AREAS[a.area] + " " + (a.info || []).join(" ")).toLowerCase(); if (!F.q.split(/\s+/).every(w => h.includes(w))) return false; }
+  return true;
+}
+function sortKey(a) { const r = S.rate[a.id]; return (a.must ? 0 : 1) * 10 + (r === "must" ? 0 : r === "maybe" ? 1 : r === "skip" ? 3 : 2); }
+function renderGrid() {
+  const list = A.filter(matches).sort((x, y) => sortKey(x) - sortKey(y));
+  $("#grid").innerHTML = list.map(cardHTML).join("") || '<p class="lede">Nothing matches. Try clearing the filters.</p>';
+  const hidden = A.length - list.length;
+  $("#resultLine").textContent = list.length + " ideas shown" + (hidden ? " · " + hidden + " hidden by filters" : "");
+  document.querySelectorAll("#catChips .chip").forEach(c => c.setAttribute("aria-pressed", F.cats.has(c.dataset.cat)));
+  document.querySelectorAll("#areaChips .chip").forEach(c => c.setAttribute("aria-pressed", F.areas.has(c.dataset.area)));
+  $("#favOnly").setAttribute("aria-pressed", F.fav); $("#mustOnly").setAttribute("aria-pressed", F.must); $("#hideSkip").setAttribute("aria-pressed", F.hideSkip);
+  updateCount();
+}
+function renderPairs() {
+  $("#pairs").innerHTML = PAIRS.map((p, k) => {
+    const opts = ['<option value="">Add all to a day…</option>'];
+    for (let i = 0; i < DAYS; i++) opts.push('<option value="' + i + '">' + dayOpt(i) + "</option>");
+    return '<div class="pair"><span class="label-kicker">Pairs well</span><h3>' + esc(p.t) + "</h3><p>" + esc(p.txt) + '</p><div class="ids">' + p.ids.map(id => "<span>" + esc(byId[id].name) + "</span>").join("") +
+      '</div><select class="addsel" data-pair="' + k + '" id="pair-' + k + '" aria-label="Add ' + esc(p.t) + ' to a day">' + opts.join("") + "</select></div>";
+  }).join("");
+}
+function renderFamily() {
+  const list = A.filter(a => a.fam);
+  $("#famGrid").innerHTML = list.map(cardHTML).join("");
+}
+
+// ---------- plan ----------
+function itemHTML(id, d, idx) {
+  const a = byId[id];
+  const sub = [fmtDur(a.hours), fmtDrive(a.drive) + (a.drive ? " from hotel" : "")];
+  if (a.resv) sub.push("reserve");
+  return '<li class="item" draggable="true" data-id="' + id + '" data-day="' + d + '" data-idx="' + idx + '"><span class="dot" aria-hidden="true"></span>' +
+    '<span class="nm">' + esc(a.name) + '<span class="sm">' + sub.join(" · ") + "</span></span>" +
+    '<span class="ctl"><button class="ib" type="button" data-act="up" aria-label="Move up"><svg viewBox="0 0 24 24">' + UP + "</svg></button>" +
+    '<button class="ib" type="button" data-act="down" aria-label="Move down"><svg viewBox="0 0 24 24">' + DOWN + "</svg></button>" +
+    '<button class="ib" type="button" data-act="rm" aria-label="Remove from this day"><svg viewBox="0 0 24 24">' + X + "</svg></button></span></li>";
+}
+function renderPlan() {
+  $("#who").value = S.who || "";
+  $("#start").value = S.start || "";
+  $("#sampleBanner").hidden = !S.sample;
+  $("#dateBanner").hidden = !!S.start;
+  // tray: shortlisted / must-do, not yet planned
+  const planned = new Set(S.days.flat());
+  const want = A.filter(a => (S.fav[a.id] || S.rate[a.id] === "must") && !planned.has(a.id) && S.rate[a.id] !== "skip");
+  const opts = d => { let o = '<option value="">Add to…</option>'; for (let i = 0; i < DAYS; i++) o += '<option value="' + i + '">' + dayOpt(i) + "</option>"; return o; };
+  $("#tray").innerHTML = '<h3>Shortlisted, not planned yet</h3>' + (want.length
+    ? "<ul>" + want.map(a => '<li draggable="true" data-id="' + a.id + '" data-day="-1"><span class="nm">' + esc(a.name) + '</span><select data-tray="' + a.id + '" id="tray-' + a.id + '" aria-label="Add ' + esc(a.name) + ' to a day">' + opts() + "</select></li>").join("") + "</ul>"
+    : '<p class="lede">Everything shortlisted is already in the plan. Hearts and "Must do" ratings from Explore show up here.</p>');
+  let h = "";
+  for (let i = 0; i < DAYS; i++) {
+    const d = dayDate(i), st = dayStats(i), w = dayWarnings(i);
+    const pct = Math.min(100, Math.round((st.total / 10) * 100));
+    h += '<section class="day" data-day="' + i + '" style="--dc:' + dayColor(i) + '">' +
+      '<div class="dayhead"><div class="row"><h3>Day ' + (i + 1) + "</h3>" + (d ? '<span class="date">' + fmtDate(d) + "</span>" : "") + "</div>" +
+      '<div class="load"><span class="status ' + st.status + '">' + st.label + "</span>" +
+      '<span class="meter" aria-hidden="true"><i style="width:' + pct + '%"></i></span><span>' + (st.total ? "~" + fmtDur(Math.round(st.total * 4) / 4) : "") + "</span></div>" +
+      (st.total ? '<span class="date">' + fmtDur(Math.round(st.hrs * 4) / 4) + " of activities + ~" + fmtDur(Math.round(st.travel * 4) / 4) + " driving</span>" : "") +
+      "</div>" +
+      (w.length ? '<ul class="warns">' + w.map(x => '<li class="' + (x.hard ? "" : "soft") + '">' + esc(x.t) + "</li>").join("") + "</ul>" : "") +
+      '<ol class="daylist" data-day="' + i + '" data-msg="' + (RESERVED[i] ? (i === 0 ? "Arrival evening. Nothing planned; he goes straight to the hotel." : "Travel day. Nothing planned.") : "Nothing yet. Add ideas from Explore or Family time, or drag one here.") + '">' + S.days[i].map((id, k) => itemHTML(id, i, k)).join("") + "</ol>" +
+      '<div class="notes field"><label for="note-' + i + '">Notes for Day ' + (i + 1) + '</label><textarea id="note-' + i + '" data-note="' + i + '" placeholder="Times, who\'s driving, what to bring…">' + esc(S.notes[i] || "") + "</textarea></div></section>";
+  }
+  $("#days").innerHTML = h;
+  updateCount();
+}
+function updateCount() { const n = S.days.reduce((s, l) => s + l.length, 0); $("#planCount").textContent = n ? "· " + n : ""; }
+
+// ---------- map ----------
+const K = 1000, LON0 = -122.70, LAT0 = 38.0, COS = Math.cos(37.7 * Math.PI / 180);
+const P = (lat, lng) => [(lng - LON0) * COS * K, (LAT0 - lat) * K];
+const VIEWS = { bay: { n: 37.94, s: 37.40, w: -122.66, e: -122.08 }, sf: { n: 37.835, s: 37.745, w: -122.52, e: -122.385 } };
+const WATER = [[38.0,-122.70],[37.905,-122.70],[37.900,-122.640],[37.880,-122.620],[37.860,-122.585],[37.845,-122.560],[37.830,-122.537],[37.818,-122.530],[37.822,-122.505],[37.827,-122.486],[37.832,-122.478],[37.845,-122.477],[37.858,-122.482],[37.872,-122.497],[37.886,-122.512],[37.886,-122.492],[37.878,-122.472],[37.869,-122.463],[37.873,-122.452],[37.890,-122.463],[37.910,-122.480],[37.935,-122.490],[37.950,-122.486],[38.0,-122.480],[38.0,-122.400],[37.955,-122.420],[37.920,-122.392],[37.900,-122.332],[37.870,-122.310],[37.830,-122.300],[37.812,-122.322],[37.790,-122.320],[37.770,-122.290],[37.750,-122.250],[37.720,-122.220],[37.700,-122.200],[37.660,-122.170],[37.620,-122.150],[37.580,-122.130],[37.540,-122.110],[37.500,-122.090],[37.470,-122.070],[37.440,-122.060],[37.445,-122.100],[37.465,-122.130],[37.485,-122.170],[37.505,-122.205],[37.530,-122.230],[37.555,-122.250],[37.570,-122.290],[37.585,-122.318],[37.594,-122.316],[37.591,-122.334],[37.598,-122.350],[37.606,-122.361],[37.630,-122.355],[37.640,-122.375],[37.660,-122.381],[37.675,-122.376],[37.690,-122.386],[37.710,-122.386],[37.725,-122.366],[37.740,-122.376],[37.755,-122.386],[37.775,-122.387],[37.790,-122.388],[37.797,-122.392],[37.808,-122.405],[37.810,-122.418],[37.808,-122.425],[37.807,-122.435],[37.806,-122.445],[37.806,-122.465],[37.810,-122.477],[37.796,-122.484],[37.788,-122.493],[37.787,-122.505],[37.780,-122.513],[37.770,-122.511],[37.740,-122.507],[37.710,-122.502],[37.680,-122.496],[37.640,-122.495],[37.600,-122.505],[37.570,-122.515],[37.530,-122.518],[37.500,-122.497],[37.490,-122.470],[37.460,-122.448],[37.420,-122.430],[37.380,-122.410],[37.330,-122.400],[37.330,-122.70]];
+const ISLES = [
+  [[37.872,-122.442],[37.868,-122.425],[37.858,-122.420],[37.853,-122.433],[37.861,-122.446]],
+  [[37.832,-122.376],[37.829,-122.364],[37.812,-122.361],[37.808,-122.372],[37.818,-122.377]]
+];
+const pathOf = pts => "M" + pts.map(p => P(p[0], p[1]).map(v => v.toFixed(1)).join(" ")).join("L") + "Z";
+let mapView = "bay", showIdeas = false, selPin = null;
+function renderMap() {
+  const v = VIEWS[mapView];
+  const [x0, y0] = P(v.n, v.w), [x1, y1] = P(v.s, v.e);
+  const W = x1 - x0, H = y1 - y0, u = W / 460;
+  const r = (mapView === "bay" ? 7.5 : 9) * u;
+  const lab = (t, lat, lng, size, cls) => { const [x, y] = P(lat, lng); return '<text class="' + (cls || "mlabel") + '" x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" font-size="' + (size * u).toFixed(2) + '" text-anchor="middle">' + t + "</text>"; };
+  const line = (cls, pts, w) => '<polyline class="' + cls + '" fill="none" stroke-width="' + (w * u).toFixed(2) + '" points="' + pts.map(p => P(p[0], p[1]).map(n => n.toFixed(1)).join(",")).join(" ") + '"/>';
+  let s = '<svg class="mapsvg" viewBox="' + x0.toFixed(1) + " " + y0.toFixed(1) + " " + W.toFixed(1) + " " + H.toFixed(1) + '" role="img" aria-label="Map of planned stops">';
+  s += '<path class="water" d="' + pathOf(WATER) + '"/>';
+  s += '<path class="shore" stroke-width="' + (1 * u).toFixed(2) + '" d="' + pathOf(WATER) + '"/>';
+  ISLES.forEach(i => { s += '<path class="isle" stroke-width="' + (0.8 * u).toFixed(2) + '" d="' + pathOf(i) + '"/>'; });
+  const [ax, ay] = P(37.8267, -122.4230); s += '<circle class="isle" cx="' + ax + '" cy="' + ay + '" r="' + (2.2 * u).toFixed(2) + '" stroke-width="' + (0.6 * u).toFixed(2) + '"/>';
+  s += line("br", [[37.7905, -122.3895], [37.8095, -122.3665], [37.8230, -122.3150]], 2);
+  s += line("br", [[37.578, -122.270], [37.620, -122.155]], 1.6);
+  s += line("gg", [[37.8105, -122.4777], [37.8323, -122.4796]], mapView === "sf" ? 3 : 3.4);
+  if (mapView === "bay") {
+    s += lab("Pacific Ocean", 37.60, -122.60, 15, "wlabel") + lab("San Francisco Bay", 37.66, -122.262, 13, "wlabel") +
+      lab("San Francisco", 37.752, -122.448, 12) + lab("Marin", 37.915, -122.56, 12) + lab("Palo Alto", 37.455, -122.205, 11) + lab("Oakland", 37.80, -122.24, 11);
+  } else {
+    s += lab("Golden Gate", 37.818, -122.497, 11, "wlabel") + lab("Bay", 37.82, -122.40, 13, "wlabel") + lab("Golden Gate Park", 37.764, -122.47, 10) + lab("Downtown", 37.786, -122.402, 10) + lab("Presidio", 37.794, -122.468, 10);
+  }
+  // pins
+  const pins = [];
+  S.days.forEach((l, i) => l.forEach(id => { const a = byId[id]; if (a.home || a.hotel || a.offmap) return; if (!pins.some(p => p.id === id)) pins.push({ id, day: i }); }));
+  if (showIdeas) A.forEach(a => { if (!a.home && !a.hotel && !a.offmap && !pins.some(p => p.id === a.id)) pins.push({ id: a.id, day: -1 }); });
+  const groups = {};
+  pins.forEach(p => { const a = byId[p.id]; const [x, y] = P(a.lat, a.lng); p.x = x; p.y = y; const k = Math.round(x / (r * 1.6)) + ":" + Math.round(y / (r * 1.6)); (groups[k] = groups[k] || []).push(p); });
+  Object.values(groups).forEach(g => { if (g.length > 1) g.forEach((p, k) => { const ang = (k / g.length) * Math.PI * 2; p.x += Math.cos(ang) * r * 1.15; p.y += Math.sin(ang) * r * 1.15; }); });
+  pins.sort((a, b) => (a.day < 0) - (b.day < 0)).reverse();
+  pins.forEach(p => {
+    const idea = p.day < 0;
+    s += '<g class="pin' + (idea ? " idea" : "") + (selPin === p.id ? " sel" : "") + '" data-pin="' + p.id + '" tabindex="0" role="button" aria-label="' + esc(byId[p.id].name) + (idea ? ", not planned" : ", Day " + (p.day + 1)) + '">' +
+      '<circle cx="' + p.x.toFixed(1) + '" cy="' + p.y.toFixed(1) + '" r="' + (idea ? r * 0.6 : r).toFixed(2) + '" stroke-width="' + (selPin === p.id ? 2.6 * u : 1.6 * u).toFixed(2) + '"' + (idea ? "" : ' style="fill:' + dayColor(p.day) + '"') + "/>" +
+      (idea ? "" : '<text x="' + p.x.toFixed(1) + '" y="' + p.y.toFixed(1) + '" font-size="' + (r * 1.15).toFixed(2) + '">' + (p.day + 1) + "</text>") + "</g>";
+  });
+  const star = (x, y, R) => { let d = ""; const rr = R * 0.45; for (let k = 0; k < 10; k++) { const ang = -Math.PI / 2 + k * Math.PI / 5, rad = k % 2 ? rr : R; d += (k ? "L" : "M") + (x + Math.cos(ang) * rad).toFixed(2) + " " + (y + Math.sin(ang) * rad).toFixed(2); } return d + "Z"; };
+  const [tx, ty] = P(HOTEL.lat, HOTEL.lng);
+  s += '<g class="home"><path d="' + star(tx, ty, 11 * u) + '" stroke-width="' + (1.4 * u).toFixed(2) + '"/><text x="' + (tx - 14 * u).toFixed(1) + '" y="' + (ty + 4 * u).toFixed(1) + '" text-anchor="end" font-size="' + (12 * u).toFixed(2) + '">Hotel</text></g>';
+  if (mapView === "bay") {
+    const [hx, hy] = P(HOME.lat, HOME.lng), q = 8 * u;
+    s += '<g class="home"><path d="M' + (hx - q).toFixed(1) + " " + (hy - q).toFixed(1) + "h" + (2 * q).toFixed(1) + "v" + (2 * q).toFixed(1) + "h" + (-2 * q).toFixed(1) + 'Z" stroke-width="' + (1.4 * u).toFixed(2) + '"/><text x="' + (hx + 12 * u).toFixed(1) + '" y="' + (hy + 4 * u).toFixed(1) + '" font-size="' + (12 * u).toFixed(2) + '">Our home · Burlingame</text></g>';
+  }
+  s += "</svg>";
+  $("#mapHost").innerHTML = s;
+  // legend
+  let lg = '<span><i style="--c:var(--ink)"></i>Star: his hotel · Square: our home</span>';
+  for (let i = 0; i < DAYS; i++) if (S.days[i].length) { const d = dayDate(i); lg += '<span><i style="--c:' + dayColor(i) + '"></i>Day ' + (i + 1) + (d ? " · " + DOW[d.getDay()] : "") + "</span>"; }
+  if (showIdeas) lg += '<span><i style="--c:var(--surface)"></i>Not planned</span>';
+  $("#legend").innerHTML = lg;
+  // off map
+  const off = [];
+  S.days.forEach((l, i) => l.forEach(id => { const a = byId[id]; if (a.home || a.hotel) return; if (a.offmap) off.push(a.name + " (Day " + (i + 1) + ", " + fmtDrive(a.drive) + " away)"); else if (mapView === "sf" && a.area !== "sf") off.push(a.name + " (Day " + (i + 1) + ")"); }));
+  $("#offmap").innerHTML = off.length ? '<p class="lede">' + (mapView === "sf" ? "Outside this view:" : "Beyond the map edge:") + '</p><ul class="offmap">' + [...new Set(off)].map(x => "<li>" + esc(x) + "</li>").join("") + "</ul>" : "";
+  $("#zBay").setAttribute("aria-pressed", mapView === "bay"); $("#zSF").setAttribute("aria-pressed", mapView === "sf"); $("#showIdeas").setAttribute("aria-pressed", showIdeas);
+}
+function showPinInfo(id) {
+  selPin = id; const a = byId[id]; const ds = daysOf(id);
+  $("#mapInfo").innerHTML = "<p><b>" + esc(a.name) + "</b> · " + esc(a.hood) + "</p><p>" + (ds.length ? "Day " + ds.map(d => d + 1).join(", ") : "Not in the plan yet") + " · " + fmtDur(a.hours) + " · " + fmtDrive(a.drive) + (a.drive ? " from hotel" : "") + "</p><p>" + esc(a.addr) + "</p>";
+  renderMap();
+}
+
+// ---------- summary ----------
+function planData() {
+  const resv = []; const seen = new Set();
+  S.days.forEach((l, i) => l.forEach(id => { const a = byId[id]; if (a.resv && !seen.has(id)) { seen.add(id); resv.push({ a, day: i }); } }));
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  resv.forEach(x => {
+    const d = dayDate(x.day);
+    if (d && x.a.book) { const o = new Date(d); o.setDate(o.getDate() - x.a.book); x.when = o <= today ? "Booking is open now" : "Opens " + fmtDate(o) + " (" + x.a.book + " days ahead)"; }
+    else if (x.a.book) x.when = "Opens about " + x.a.book + " days before";
+    else x.when = "Book a few days ahead";
+  });
+  resv.sort((p, q) => ((q.a.book || 0) - (p.a.book || 0)) || (p.day - q.day));
+  return resv;
+}
+function renderSummary() {
+  let framed = false; try { framed = window.self !== window.top; } catch (e) { framed = true; }
+  $("#printBtn").hidden = framed; $("#framedNote").hidden = !framed;
+  const resv = planData();
+  let h = "<div><h3>" + esc(whoName()) + "'s Bay Area week</h3><p class=\"lede\">Hotel: " + HOTEL.name + ", " + HOTEL.addr + " · Family: Burlingame" + (S.start ? " · starts " + fmtDate(parseDate(S.start)) : "") + "</p></div>";
+  h += '<div><h3>Reservations to book</h3>' + (resv.length ? '<ul class="resvlist">' + resv.map(x => {
+    const d = dayDate(x.day);
+    return "<li><b>" + esc(x.a.name) + "</b> · Day " + (x.day + 1) + (d ? ", " + fmtDate(d) : "") + '<span class="when">' + esc(x.when) + "</span>" + esc(x.a.resvHow || "") + "</li>";
+  }).join("") + "</ul>" : '<p class="lede">Nothing in the plan needs a reservation yet.</p>') + "</div>";
+  for (let i = 0; i < DAYS; i++) {
+    const d = dayDate(i), st = dayStats(i), l = S.days[i];
+    h += '<div class="sday" style="--dc:' + dayColor(i) + '"><h4>Day ' + (i + 1) + (d ? " · " + fmtDate(d) : "") + " · " + st.label + (st.total ? " (~" + fmtDur(Math.round(st.total * 2) / 2) + ")" : "") + "</h4>" +
+      (l.length ? "<ol>" + l.map(id => { const a = byId[id]; return "<li><b>" + esc(a.name) + "</b>" + (a.resv ? " · reservation" : "") + '<span class="a">' + esc(a.addr) + " · " + fmtDur(a.hours) + " · " + fmtDrive(a.drive) + (a.drive ? " from hotel" : "") + "</span></li>"; }).join("") + "</ol>" : '<p class="n">' + (RESERVED[i] ? RES_NOTE[i] : "Open day.") + "</p>") +
+      (S.notes[i] ? '<p class="n">Notes: ' + esc(S.notes[i]) + "</p>" : "") + "</div>";
+  }
+  $("#sum").innerHTML = h;
+}
+function summaryText() {
+  const resv = planData(); const L = [];
+  L.push(whoName() + "'s Bay Area week"); L.push("Hotel: " + HOTEL.name + ", " + HOTEL.addr); L.push("Family home: Burlingame" + (S.start ? " · starts " + fmtDate(parseDate(S.start)) : "")); L.push("");
+  L.push("RESERVATIONS TO BOOK");
+  if (!resv.length) L.push("- None yet");
+  resv.forEach(x => { const d = dayDate(x.day); L.push("- " + x.a.name + " (Day " + (x.day + 1) + (d ? ", " + fmtDate(d) : "") + "): " + x.when + ". " + (x.a.resvHow || "")); });
+  for (let i = 0; i < DAYS; i++) {
+    const d = dayDate(i), st = dayStats(i); L.push("");
+    L.push("DAY " + (i + 1) + (d ? " · " + fmtDate(d) : "") + " · " + st.label);
+    if (!S.days[i].length) L.push("  " + (RESERVED[i] ? RESERVED[i] : "Open day"));
+    S.days[i].forEach(id => { const a = byId[id]; L.push("  • " + a.name + (a.resv ? " [reservation]" : "") + " — " + a.addr + " (" + fmtDur(a.hours) + ", " + fmtDrive(a.drive) + (a.drive ? " from hotel" : "") + ")"); });
+    if (S.notes[i]) L.push("  Notes: " + S.notes[i]);
+  }
+  return L.join("\n");
+}
+
+// ---------- events ----------
+document.addEventListener("click", e => {
+  const tab = e.target.closest(".tab"); if (tab) { setTab(tab.dataset.tab); return; }
+  const card = e.target.closest(".card");
+  const b = e.target.closest("button");
+  if (card && b) {
+    const id = card.dataset.id;
+    if (b.dataset.act === "fav") { S.fav[id] = !S.fav[id]; if (!S.fav[id]) delete S.fav[id]; save(); rerenderCards(); toast(S.fav[id] ? "Added to shortlist" : "Removed from shortlist"); return; }
+    if (b.dataset.act === "rate") { const r = b.dataset.r; if (S.rate[id] === r) delete S.rate[id]; else S.rate[id] = r; save(); rerenderCards(); return; }
+  }
+  const chip = e.target.closest(".chip");
+  if (chip && chip.dataset.cat) { F.cats.has(chip.dataset.cat) ? F.cats.delete(chip.dataset.cat) : F.cats.add(chip.dataset.cat); renderGrid(); return; }
+  if (chip && chip.dataset.area) { F.areas.has(chip.dataset.area) ? F.areas.delete(chip.dataset.area) : F.areas.add(chip.dataset.area); renderGrid(); return; }
+  const item = e.target.closest(".item");
+  if (item && b) {
+    const d = +item.dataset.day, k = +item.dataset.idx, l = S.days[d];
+    if (b.dataset.act === "rm") { const nm = byId[l[k]].name; removeFrom(d, k); renderPlan(); toast("Removed " + nm); }
+    if (b.dataset.act === "up" && k > 0) { [l[k - 1], l[k]] = [l[k], l[k - 1]]; S.sample = false; save(); renderPlan(); }
+    if (b.dataset.act === "down" && k < l.length - 1) { [l[k + 1], l[k]] = [l[k], l[k + 1]]; S.sample = false; save(); renderPlan(); }
+    return;
+  }
+  const pin = e.target.closest(".pin"); if (pin) { showPinInfo(pin.dataset.pin); return; }
+});
+document.addEventListener("keydown", e => { if ((e.key === "Enter" || e.key === " ") && e.target.classList && e.target.classList.contains("pin")) { e.preventDefault(); showPinInfo(e.target.dataset.pin); } });
+document.addEventListener("change", e => {
+  const t = e.target;
+  if (t.dataset.act === "add" && t.value !== "") { const id = t.closest(".card").dataset.id; addToDay(id, +t.value); rerenderCards(); return; }
+  if (t.dataset.pair !== undefined && t.value !== "") { const p = PAIRS[+t.dataset.pair], d = +t.value; p.ids.forEach(id => addToDay(id, d, true)); t.value = ""; toast(p.t + " → Day " + (d + 1)); rerenderCards(); return; }
+  if (t.dataset.tray && t.value !== "") { addToDay(t.dataset.tray, +t.value); renderPlan(); return; }
+});
+document.addEventListener("input", e => {
+  const t = e.target;
+  if (t.id === "q") { F.q = t.value.trim().toLowerCase(); renderGrid(); }
+  if (t.dataset.note !== undefined) { S.notes[+t.dataset.note] = t.value; save(); }
+  if (t.id === "who") { S.who = t.value; save(); updateTitle(); }
+});
+$("#start").addEventListener("change", e => { S.start = e.target.value; save(); renderPlan(); renderPairs(); updateTitle(); });
+function rerenderCards() { if (S.tab === "explore") renderGrid(); if (S.tab === "family") renderFamily(); updateCount(); }
+$("#favOnly").onclick = () => { F.fav = !F.fav; renderGrid(); };
+$("#mustOnly").onclick = () => { F.must = !F.must; renderGrid(); };
+$("#hideSkip").onclick = () => { F.hideSkip = !F.hideSkip; renderGrid(); };
+$("#clearF").onclick = () => { F.cats.clear(); F.areas.clear(); F.q = ""; F.fav = false; F.must = false; $("#q").value = ""; renderGrid(); };
+$("#zBay").onclick = () => { mapView = "bay"; renderMap(); };
+$("#zSF").onclick = () => { mapView = "sf"; renderMap(); };
+$("#showIdeas").onclick = () => { showIdeas = !showIdeas; renderMap(); };
+let armed = null;
+function twoTap(btn, label, fn) {
+  if (armed === btn) { clearTimeout(btn._t); btn.classList.remove("armed"); btn.textContent = label; armed = null; fn(); return; }
+  armed = btn; btn.classList.add("armed"); btn.textContent = "Tap again to confirm";
+  btn._t = setTimeout(() => { btn.classList.remove("armed"); btn.textContent = label; armed = null; }, 3500);
+}
+$("#clearPlan").onclick = e => twoTap(e.currentTarget, "Clear plan", () => { S.days = Array.from({ length: DAYS }, () => []); S.notes = Array(DAYS).fill(""); S.sample = false; save(); renderPlan(); toast("Plan cleared"); });
+$("#loadSample").onclick = e => twoTap(e.currentTarget, "Load sample plan", () => { S.days = SAMPLE.map(d => d.slice()); S.sample = true; save(); renderPlan(); toast("Sample plan loaded"); });
+$("#copyBtn").onclick = () => {
+  const txt = summaryText(); const fb = $("#copyFallback");
+  const fallback = () => { fb.hidden = false; fb.value = txt; fb.focus(); fb.select(); toast("Select all and copy the text below"); };
+  try { navigator.clipboard.writeText(txt).then(() => { fb.hidden = true; toast("Plan copied. Paste it into a message or email."); }, fallback); } catch (err) { fallback(); }
+};
+$("#printBtn").onclick = () => { renderSummary(); window.print(); };
+
+// drag & drop (computers)
+let drag = null;
+document.addEventListener("dragstart", e => {
+  const el = e.target.closest && e.target.closest("[draggable=true]"); if (!el || !el.dataset.id) return;
+  drag = { id: el.dataset.id, day: +el.dataset.day, idx: el.dataset.idx !== undefined ? +el.dataset.idx : -1 };
+  try { e.dataTransfer.setData("text/plain", el.dataset.id); e.dataTransfer.effectAllowed = "move"; } catch (err) {}
+});
+document.addEventListener("dragover", e => { const d = e.target.closest && e.target.closest(".day"); if (d && drag) { e.preventDefault(); document.querySelectorAll(".day.over").forEach(x => x !== d && x.classList.remove("over")); d.classList.add("over"); } });
+document.addEventListener("dragleave", e => { const d = e.target.closest && e.target.closest(".day"); if (d && !d.contains(e.relatedTarget)) d.classList.remove("over"); });
+document.addEventListener("drop", e => {
+  const d = e.target.closest && e.target.closest(".day"); if (!d || !drag) return; e.preventDefault();
+  const to = +d.dataset.day;
+  const overItem = e.target.closest(".item");
+  if (drag.day >= 0) S.days[drag.day].splice(drag.idx, 1);
+  const a = byId[drag.id];
+  if (!a.repeat) S.days.forEach(l => { const k = l.indexOf(drag.id); if (k >= 0) l.splice(k, 1); });
+  let pos = S.days[to].length;
+  if (overItem && +overItem.dataset.day === to) { pos = +overItem.dataset.idx; if (drag.day === to && drag.idx < pos) pos -= 1; }
+  if (!(a.repeat && S.days[to].includes(drag.id))) S.days[to].splice(Math.min(pos, S.days[to].length), 0, drag.id);
+  S.sample = false; save(); drag = null; renderPlan(); toast(a.name + " → Day " + (to + 1));
+});
+document.addEventListener("dragend", () => { drag = null; document.querySelectorAll(".day.over").forEach(x => x.classList.remove("over")); });
+
+// theme
+function applyTheme() {
+  const r = document.documentElement;
+  if (S.theme === "auto") r.removeAttribute("data-theme"); else r.setAttribute("data-theme", S.theme);
+  $("#themeBtn").textContent = "Theme: " + { auto: "Auto", light: "Light", dark: "Dark" }[S.theme];
+}
+$("#themeBtn").onclick = () => { S.theme = { auto: "light", light: "dark", dark: "auto" }[S.theme] || "auto"; save(); applyTheme(); };
+function updateTitle() {
+  const n = whoName(); $("#title").textContent = n + "'s Bay Area Week";
+  const a = dayDate(0), z = dayDate(DAYS - 1);
+  $("#subline").textContent = a ? fmtDate(a) + " – " + fmtDate(z) + ". Arrives the evening of Day 1 and flies home on Day 8, leaving six full days." : "Eight days of San Francisco, Marin and the Peninsula, planned together.";
+}
+
+// init
+load();
+drawBridge(); buildChips(); renderPairs(); applyTheme(); updateTitle();
+const hashTab = (location.hash || "").slice(1);
+setTab(TABS.includes(hashTab) ? hashTab : (S.tab || "explore"), true);
+})();
+</script>
+
+</body>
+</html>
